@@ -19,9 +19,7 @@ export class NavbarComponent {
     @Inject(PLATFORM_ID) private _PLATFORM_ID: object,
     private renderer: Renderer2
   ) {}
-  ngOnInit(): void {
-    this.onLanguageChange();
-  }
+  ngOnInit(): void {}
   onLanguageChange() {
     if (isPlatformBrowser(this._PLATFORM_ID)) {
       this.translateService.use(this.selectedLanguage);
