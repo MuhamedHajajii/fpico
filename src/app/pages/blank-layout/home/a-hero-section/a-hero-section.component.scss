@@ -1,0 +1,15 @@
+.first_title {
+  color: #a9a9a9;
+  font-size: 16px;
+  font-weight: 400;
+
+  span {
+    color: #fff;
+  }
+}
+.hero_image {
+  position: absolute;
+  bottom: 80%;
+  left: -115px;
+  z-index: -1;
+}

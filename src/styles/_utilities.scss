@@ -9,12 +9,16 @@
   background-color: $secondary-color;
 }
 
-.border-color-main {
-  border-color: $main-color !important;
+.bg-third {
+  background-color: $third-color;
 }
 
 .bg-third {
-  background-color: $third-color;
+  background-color: $fourth-color;
+}
+
+.border-color-main {
+  border-color: $main-color !important;
 }
 
 .box-shadow {
@@ -35,24 +39,21 @@
 }
 
 .text-third {
-  color: $secondary-color;
+  color: $third-color;
 }
 
-.text-dark {
-  color: $text-dark;
+.text-fourth {
+  color: $fourth-color;
 }
-.text-secondary-dark {
-  color: $text-secondary;
-}
+
 .text-light {
   color: $text-light;
 }
-.text-semi {
-  color: $text-semi-light;
-}
+
 .text-lighter {
-  color: $text-parag;
+  color: $text-lighter;
 }
+
 .footer-links-color {
   color: #4b5563 !important;
 }

@@ -2,18 +2,16 @@
 
 .btn-main {
   background-color: $main-color !important;
-  color: $text-light !important;
+  color: $fourth-color !important;
   border-radius: $border-radius !important;
   text-decoration: none !important;
-  padding-block: 6px !important;
 }
 
 .btn-secondary {
   background-color: $text-light !important;
-  color: $text-semi-light !important;
+  color: $text-lighter !important;
   border-radius: $border-radius !important;
   text-decoration: none !important;
-  padding-block: 6px !important;
 }
 
 .btn-show-all {

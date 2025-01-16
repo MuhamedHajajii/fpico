@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import "base";
+@import "forms";
+@import "typography";
+@import "variables";
+@import "utilities";
+@import "buttons";
+
+@import "../node_modules/intl-tel-input/build/css/intlTelInput.css";
+
+:root,
+html[dir="ltr"] {
+  direction: ltr !important;
+  text-align: left !important;
+  font-family: "Inter", Arial, sans-serif !important;
+}
+:root,
+html[dir="rtl"] {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "Cairo", Tahoma, sans-serif !important;
+}
