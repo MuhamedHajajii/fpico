@@ -7,7 +7,9 @@
 @import "buttons";
 
 @import "../node_modules/intl-tel-input/build/css/intlTelInput.css";
-
+body {
+  overflow-x: hidden;
+}
 :root,
 html[dir="ltr"] {
   direction: ltr !important;
