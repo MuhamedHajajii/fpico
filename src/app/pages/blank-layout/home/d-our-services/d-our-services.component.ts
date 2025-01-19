@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { OurServicesContentService } from '../../../../core/services/our-services-content.service';
 
 @Component({
   selector: 'app-d-our-services',
@@ -14,7 +15,9 @@ export class DOurServicesComponent {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
-    dots: false,
+    dots: true,
+    dotsData: true,
+    dotsSpeed: 700,
     navSpeed: 700,
     navText: ['', ''],
     margin: 10,
@@ -31,6 +34,9 @@ export class DOurServicesComponent {
     },
     nav: false,
   };
+
+  constructor(public _OurServicesContentService: OurServicesContentService) {}
+
   imageLoaded(img: HTMLImageElement): void {
     img.nextElementSibling?.remove();
   }

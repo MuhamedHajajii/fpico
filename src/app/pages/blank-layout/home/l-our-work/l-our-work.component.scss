@@ -1,0 +1,22 @@
+@import "variables";
+
+.image_holder {
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    background-color: $main-color;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    width: 95%;
+    height: 95%;
+    border-radius: 10px;
+    z-index: -1;
+  }
+}
+.col-lg-8 {
+  background-image: url("/assets/images/DownloadSection/bg-works.png");
+  background-repeat: no-repeat;
+}

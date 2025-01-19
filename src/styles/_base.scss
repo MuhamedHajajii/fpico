@@ -11,7 +11,7 @@ body {
 }
 // cards
 .card {
-  border: 1px solid transparent;
+  // border: 1px solid transparent;
   transition: 0.5s all;
 }
 
@@ -26,8 +26,8 @@ body {
   direction: rtl !important;
 }
 .card:hover {
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.27);
-  border: 1px solid #334f97;
+  // box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.27);
+  // border: 1px solid #334f97;
 }
 .drop-down-container {
   &:hover {
@@ -195,4 +195,14 @@ img {
 
 .hyper_link {
   text-decoration: none !important;
+}
+
+.video-like-image {
+  width: 100%; /* Set the width to your preferred size */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Add rounded corners */
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  object-fit: cover; /* Ensure it behaves like an image */
+  display: block; /* Adjust display behavior */
+  cursor: pointer; /* Add a pointer cursor if it’s clickable */
 }

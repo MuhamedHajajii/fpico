@@ -10,166 +10,29 @@
     @defer {
     <div>
       <owl-carousel-o [options]="customOptions">
-        <ng-template carouselSlide>
+        @for (slider of _OurServicesContentService.services; track $index) {
+        <ng-template carouselSlide [id]="slider.title">
           <div>
             <div class="images_carousel">
               <img
                 #img
                 (load)="imageLoaded(img)"
                 class="w-100 h-100"
-                src="./assets/images/services/1.png"
-                alt=""
+                [src]="slider.image_url"
+                [alt]="slider.title"
               />
               <span
                 class="placeholder bg-opacity-100 position-absolute top-0 start-0 end-0 bottom-0"
               ></span>
               <span
-                class="bg-white rounded-3 position-absolute bottom-0 start-50 translate-middle-x text-nowrap p-3 fs-5 mb-3 fw-bold"
-                >green houses</span
+                style="width: 80%;style='13px'"
+                class="bg-white rounded-3 position-absolute bottom-0 start-50 translate-middle-x text-nowrap px-3 py-2 fs-5 mb-3 fw-bold"
+                >{{ slider.title }}</span
               >
             </div>
           </div>
         </ng-template>
-        <ng-template carouselSlide>
-          <div>
-            <div class="images_carousel">
-              <img
-                #img
-                (load)="imageLoaded(img)"
-                class="w-100 h-100"
-                src="./assets/images/services/2.png"
-                alt=""
-              />
-              <span
-                class="placeholder bg-opacity-100 position-absolute top-0 start-0 end-0 bottom-0"
-              ></span>
-              <span
-                class="bg-white rounded-3 position-absolute bottom-0 start-50 translate-middle-x text-nowrap p-3 fs-5 mb-3 fw-bold"
-                >landscape works</span
-              >
-            </div>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div>
-            <div class="images_carousel">
-              <img
-                #img
-                (load)="imageLoaded(img)"
-                class="w-100 h-100"
-                src="./assets/images/services/3.png"
-                alt=""
-              />
-              <span
-                class="placeholder bg-opacity-100 position-absolute top-0 start-0 end-0 bottom-0"
-              ></span>
-              <span
-                class="bg-white rounded-3 position-absolute bottom-0 start-50 translate-middle-x text-nowrap p-3 fs-5 mb-3 fw-bold"
-                >irrigation</span
-              >
-            </div>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div>
-            <div class="images_carousel">
-              <img
-                #img
-                (load)="imageLoaded(img)"
-                class="w-100 h-100"
-                src="./assets/images/services/4.png"
-                alt=""
-              />
-              <span
-                class="placeholder bg-opacity-100 position-absolute top-0 start-0 end-0 bottom-0"
-              ></span>
-              <span
-                class="bg-white rounded-3 position-absolute bottom-0 start-50 translate-middle-x text-nowrap p-3 fs-5 mb-3 fw-bold"
-                >concrete construction</span
-              >
-            </div>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div>
-            <div class="images_carousel">
-              <img
-                #img
-                (load)="imageLoaded(img)"
-                class="w-100 h-100"
-                src="./assets/images/services/5.png"
-                alt=""
-              />
-              <span
-                class="placeholder bg-opacity-100 position-absolute top-0 start-0 end-0 bottom-0"
-              ></span>
-              <span
-                class="bg-white rounded-3 position-absolute bottom-0 start-50 translate-middle-x text-nowrap p-3 fs-5 mb-3 fw-bold"
-                >najdi works</span
-              >
-            </div>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div>
-            <div class="images_carousel">
-              <img
-                #img
-                (load)="imageLoaded(img)"
-                class="w-100 h-100"
-                src="./assets/images/services/6.png"
-                alt=""
-              />
-              <span
-                class="placeholder bg-opacity-100 position-absolute top-0 start-0 end-0 bottom-0"
-              ></span>
-              <span
-                class="bg-white rounded-3 position-absolute bottom-0 start-50 translate-middle-x text-nowrap p-3 fs-5 mb-3 fw-bold"
-                >design and managment</span
-              >
-            </div>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div>
-            <div class="images_carousel">
-              <img
-                #img
-                (load)="imageLoaded(img)"
-                class="w-100 h-100"
-                src="./assets/images/services/7.png"
-                alt=""
-              />
-              <span
-                class="placeholder bg-opacity-100 position-absolute top-0 start-0 end-0 bottom-0"
-              ></span>
-              <span
-                class="bg-white rounded-3 position-absolute bottom-0 start-50 translate-middle-x text-nowrap p-3 fs-5 mb-3 fw-bold"
-                >steel structure</span
-              >
-            </div>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div>
-            <div class="images_carousel">
-              <img
-                #img
-                (load)="imageLoaded(img)"
-                class="w-100 h-100"
-                src="./assets/images/services/8.png"
-                alt=""
-              />
-              <span
-                class="placeholder bg-opacity-100 position-absolute top-0 start-0 end-0 bottom-0"
-              ></span>
-              <span
-                class="bg-white rounded-3 position-absolute bottom-0 start-50 translate-middle-x text-nowrap p-3 fs-5 mb-3 fw-bold"
-                >electrical & mechanical work</span
-              >
-            </div>
-          </div>
-        </ng-template>
+        }
       </owl-carousel-o>
     </div>
     }
