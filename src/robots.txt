@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://fpico.vercel.app/sitemap.xml
