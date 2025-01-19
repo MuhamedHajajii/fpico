@@ -31,6 +31,7 @@
             },
             "assets": [
              "src/assets/images/my-fav.ico/favicon.ico",
+             "src/assets/images/my-fav.ico",
               "src/assets"
             ],
             "styles": [
