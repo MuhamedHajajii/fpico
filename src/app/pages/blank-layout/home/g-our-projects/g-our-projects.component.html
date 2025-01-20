@@ -1,7 +1,7 @@
 <section class="text-capitalize">
   <div class="container text-center">
-    <header>
-      <h2 class="text-light">
+    <header [innerHTML]="'home.projects.text' | translate">
+      <!-- <h2 class="text-light">
         <span class="text-main">our</span> summary projects
       </h2>
       <p class="text-lighter">
@@ -10,7 +10,7 @@
           >which we worked on with all dilligence,professionalism, and interest
           in every project</span
         >
-      </p>
+      </p> -->
     </header>
     <div class="row g-3">
       <div class="col-md-4">
@@ -23,7 +23,9 @@
           <div
             class="card-img-overlay w-100 h-100 d-flex justify-content-center align-items-center bg-black bg-opacity-50"
           >
-            <h3 class="text-white">art house riyadh show</h3>
+            <h3 class="text-white">
+              {{ "home.projects.project01" | translate }}
+            </h3>
           </div>
         </div>
       </div>
@@ -38,7 +40,7 @@
             class="card-img-overlay w-100 h-100 d-flex justify-content-center align-items-center bg-black bg-opacity-50"
           >
             <h3 class="text-white">
-              art house riyadh <span class="d-block">show</span>
+              {{ "home.projects.project02" | translate }}
             </h3>
           </div>
         </div>
@@ -54,7 +56,7 @@
             class="card-img-overlay w-100 h-100 d-flex justify-content-center align-items-center bg-black bg-opacity-50"
           >
             <h3 class="text-white">
-              blvd world discovery <span class="d-block">area</span>
+              {{ "home.projects.project03" | translate }}
             </h3>
           </div>
         </div>
@@ -70,7 +72,7 @@
             class="card-img-overlay w-100 h-100 d-flex justify-content-center align-items-center bg-black bg-opacity-50"
           >
             <h3 class="text-white">
-              jadwi al-basateen <span class="d-block">sales</span>
+              {{ "home.projects.project04" | translate }}
             </h3>
           </div>
         </div>
@@ -86,7 +88,7 @@
             class="card-img-overlay w-100 h-100 d-flex justify-content-center align-items-center bg-black bg-opacity-50"
           >
             <h3 class="text-white">
-              art house riyadh <span class="d-block">show</span>
+              {{ "home.projects.project05" | translate }}
             </h3>
           </div>
         </div>
@@ -102,7 +104,7 @@
             class="card-img-overlay w-100 h-100 d-flex justify-content-center align-items-center bg-black bg-opacity-50"
           >
             <h3 class="text-white">
-              findining suchi <span class="d-block">restaurant</span>
+              {{ "home.projects.project06" | translate }}
             </h3>
           </div>
         </div>

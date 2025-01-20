@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { OurServicesContentService } from '../../../../core/services/our-services-content.service';
+import {
+  LangChangeEvent,
+  TranslateModule,
+  TranslateService,
+} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-d-our-services',
   standalone: true,
-  imports: [CarouselModule],
+  imports: [CarouselModule, TranslateModule],
   templateUrl: './d-our-services.component.html',
   styleUrl: './d-our-services.component.scss',
 })
@@ -17,6 +22,7 @@ export class DOurServicesComponent {
     pullDrag: true,
     dots: true,
     dotsData: true,
+
     dotsSpeed: 700,
     navSpeed: 700,
     navText: ['', ''],
@@ -35,7 +41,27 @@ export class DOurServicesComponent {
     nav: false,
   };
 
-  constructor(public _OurServicesContentService: OurServicesContentService) {}
+  constructor(
+    public _OurServicesContentService: OurServicesContentService,
+    private _TranslateService: TranslateService
+  ) {}
+
+  ngOnInit(): void {
+    this._TranslateService.onLangChange.subscribe((params: LangChangeEvent) => {
+      console.log(params);
+      if (params.lang === 'ar') {
+        this.customOptions = {
+          ...this.customOptions,
+          rtl: true,
+        };
+      } else {
+        this.customOptions = {
+          ...this.customOptions,
+          rtl: false,
+        };
+      }
+    });
+  }
 
   imageLoaded(img: HTMLImageElement): void {
     img.nextElementSibling?.remove();

@@ -1,11 +1,11 @@
 <section class="text-capitalize my-5 text-center">
   <div class="container">
-    <header>
-      <h2 class="text-light"><span class="text-main">our</span> services</h2>
+    <header [innerHTML]="'home.services-title' | translate">
+      <!-- <h2 class="text-light"><span class="text-main">our</span> services</h2>
       <p class="text-lighter">
         we offer a comprehensive range of construction services designed to meet
         <span class="d-block">your needs</span>
-      </p>
+      </p> -->
     </header>
     @defer {
     <div>
@@ -26,8 +26,8 @@
               ></span>
               <span
                 style="width: 80%;style='13px'"
-                class="bg-white rounded-3 position-absolute bottom-0 start-50 translate-middle-x text-nowrap px-3 py-2 fs-5 mb-3 fw-bold"
-                >{{ slider.title }}</span
+                class="bg-white rounded-3 overflow-hidden position-absolute bottom-0 start-50 translate-middle-x text-nowrap px-3 py-2 fs-5 mb-3 fw-bold"
+                >{{ slider.title | translate }}</span
               >
             </div>
           </div>

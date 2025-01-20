@@ -5,16 +5,25 @@
       class="section_bg p-3 my-5 d-flex align-items-center"
     >
       <div class="text-capitalize">
-        <h2 class="display-1 text-white fw-light mt-5">
-          Ready To
-          <span class="d-block"> Build Together </span>
+        <h2
+          [innerHTML]="'home.contactus' | translate"
+          class="display-1 text-white fw-light mt-5"
+        >
+          <!-- Ready To
+          <span class="d-block"> Build Together </span> -->
         </h2>
         <div class="text-capitalize mt-4">
-          <button class="text-capitalize btn-third btn mx-2 mb-3">
-            build a project with us
+          <button
+            [innerHTML]="'home.contact-us.btn01' | translate"
+            class="text-capitalize btn-third btn mx-2 mb-3"
+          >
+            <!-- build a project with us -->
           </button>
-          <button class="text-capitalize btn-third btn mx-2 mb-3">
-            build a career with us
+          <button
+            [innerHTML]="'home.contact-us.btn02' | translate"
+            class="text-capitalize btn-third btn mx-2 mb-3"
+          >
+            <!-- build a career with us -->
           </button>
         </div>
       </div>

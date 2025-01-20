@@ -19,8 +19,11 @@
           ></span>
         </div>
       </div>
-      <div class="col-lg-7 col-xl-7 mt-5 master_message">
-        <div class="text-capitalize pt-2">
+      <div
+        [innerHTML]="'home.message.firsttitle' | translate"
+        class="col-lg-7 col-xl-7 mt-5 master_message"
+      >
+        <!-- <div class="text-capitalize pt-2">
           <h2 class="text-light ms-0 ms-md-4">chairman message</h2>
           <div
             class="border-radius-10 p-3 h5 position-relative z-3 manager_title"
@@ -52,7 +55,7 @@
               vision under the guidance of our wise government
             </p>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

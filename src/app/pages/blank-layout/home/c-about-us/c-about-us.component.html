@@ -5,17 +5,19 @@
         class="col-md-4 position-relative d-flex justify-content-center align-items-center"
       >
         <div>
-          <h2 class="mb-5">
-            <span class="rounded-1 p-3 fs-18" style="background: #303030"
-              >about fpico</span
-            >
-          </h2>
-          <h3 class="mb-3">what we stand for</h3>
-          <p class="text-lighter">
-            fpico is a saudi company specializing in contracting services that
-            seeks to cover all the need of society and meet all desiresat
-            competitive prices and high quality
-          </p>
+          <div [innerHTML]="'home.about-first-section' | translate">
+            <!-- <h2 class="mb-5">
+              <span class="rounded-1 p-3 fs-18" style="background: #303030"
+                >about fpico</span
+              >
+            </h2>
+            <h3 class="mb-3">what we stand for</h3>
+            <p class="text-lighter">
+              fpico is a saudi company specializing in contracting services that
+              seeks to cover all the need of society and meet all desiresat
+              competitive prices and high quality
+            </p> -->
+          </div>
           <img
             class="position-absolute top-0 end-0 m-3"
             src="./assets/images/DownloadSection/logo-light.png"
@@ -43,19 +45,21 @@
       <div
         class="col-md-4 position-relative d-flex justify-content-center align-items-center flex-column"
       >
-        <div>
-          <h3 class="mb-3">our mission</h3>
-          <p class="text-lighter">
-            get the perfect design with a super aesthetic touch at a very
-            reasonable price in a specific time and get it with the best quality
-          </p>
-        </div>
-        <div>
-          <h3 class="mb-3">our vision</h3>
-          <p class="text-lighter">
-            to be saudi’s leading construction partner by providing innovative,
-            reliable, and customer focused solutions
-          </p>
+        <div [innerHTML]="'home.about.second-section' | translate">
+          <!-- <div>
+            <h3 class="mb-3">our mission</h3>
+            <p class="text-lighter">
+              get the perfect design with a super aesthetic touch at a very
+              reasonable price in a specific time and get it with the best quality
+            </p>
+          </div>
+          <div>
+            <h3 class="mb-3">our vision</h3>
+            <p class="text-lighter">
+              to be saudi’s leading construction partner by providing innovative,
+              reliable, and customer focused solutions
+            </p>
+          </div> -->
         </div>
       </div>
     </div>

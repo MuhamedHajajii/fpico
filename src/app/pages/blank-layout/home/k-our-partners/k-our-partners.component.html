@@ -2,14 +2,17 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <header class="text-center text-lg-start">
-          <h2 class="text-light">
+        <header
+          [innerHTML]="'home.partners.text' | translate"
+          class="text-center text-lg-start"
+        >
+          <!-- <h2 class="text-light">
             <span class="text-main">our</span> partners
           </h2>
           <p class="text-lighter">
             our partners who contributed to the distinguished success we have
             achieved and who trusted us
-          </p>
+          </p> -->
         </header>
       </div>
       <div
@@ -89,9 +92,10 @@
         class="bg-black bg-opacity-50 position-absolute top-0 start-0 end-0 bottom-0"
       ></span>
       <div
+        [innerHTML]="'home.knowmore.text' | translate"
         class="position-absolute text-center top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center text-capitalize"
       >
-        <div>
+        <!-- <div>
           <h2 class="text-white display-5 fw-bold">
             would you like to know more about
             <span class="text-uppercase text-main fw-bold">fPICO</span>?
@@ -114,7 +118,7 @@
               Click Here
             </a>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

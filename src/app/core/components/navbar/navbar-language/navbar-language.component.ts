@@ -25,13 +25,13 @@ export class NavbarLanguageComponent {
     this.selectedLanguage = this.translateService.getBrowserLang() || 'ar';
   }
   onLanguageChange() {
-    // this._NgxSpinnerService.show();
+    this._NgxSpinnerService.show();
     if (isPlatformBrowser(this._PLATFORM_ID)) {
       this.translateService.use(this.selectedLanguage).subscribe({
         next: (response) => {
-          // setTimeout(() => {
-          //   this._NgxSpinnerService.hide();
-          // }, 1500);
+          setTimeout(() => {
+            this._NgxSpinnerService.hide();
+          }, 1500);
         },
       });
 

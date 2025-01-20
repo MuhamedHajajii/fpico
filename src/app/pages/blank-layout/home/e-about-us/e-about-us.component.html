@@ -2,69 +2,95 @@
   <div
     class="container position-relative overflow-hidden z-1 text-capitalize rounded-1"
   >
-    <header class="text-center pb-2 pt-5 py-md-5">
-      <h2 class="text-light">
+    <header
+      [innerHTML]="'home.about.us.two.title' | translate"
+      class="text-center pb-2 pt-5 py-md-5"
+    >
+      <!-- <h2 class="text-light">
         why choose <span class="text-main">fpico</span> ?
       </h2>
       <p class="text-lighter">
         we offer a comprehensive range of construction services designed to meet
         <span class="d-block">your needs</span>
-      </p>
+      </p> -->
     </header>
     <div class="pb-4">
       @defer {
       <div class="pb-5 mb-5 col-11 mx-auto">
         <owl-carousel-o [options]="customOptions">
           <ng-template carouselSlide>
-            <div>
-              <div class="images_carousel">
-                <p class="text-lighter fs-3 fw-semibold mb-0">01</p>
-                <h2 class="text-light h4">cost</h2>
-                <p class="text-lighter">
-                  we understand the impact our work has on the communities we
-                  operate within.
-                </p>
-                <p class="text-lighter">
-                  thus, we are always committed to delivering the highest
-                  quality the first time around
-                </p>
+            <div class="images_carousel">
+              <div
+                [innerHTML]="
+                  'home.about.carousel.about.carousel.slide01' | translate
+                "
+              >
+                <!-- <div class="images_carousel">
+                  <p class="text-lighter fs-3 fw-semibold mb-0">01</p>
+                  <h2 class="text-light h4">cost</h2>
+                  <p class="text-lighter">
+                    we understand the impact our work has on the communities we
+                    operate within.
+                  </p>
+                  <p class="text-lighter">
+                    thus, we are always committed to delivering the highest
+                    quality the first time around
+                  </p>
+                </div> -->
               </div>
             </div>
           </ng-template>
           <ng-template carouselSlide>
-            <div>
-              <div class="images_carousel">
-                <p class="text-lighter fs-3 fw-semibold mb-0">02</p>
-                <h2 class="text-light h4">time</h2>
-                <p class="text-lighter">
-                  we manage our projects effectively to ensure results are
-                  achieved within agree timelines
-                </p>
-                <p class="text-lighter">
-                  reflecting, our on going commitment to speed and accuracy
-                </p>
+            <div class="images_carousel">
+              <div
+                [innerHTML]="
+                  'home.about.carousel.about.carousel.slide02' | translate
+                "
+              >
+                <!-- <div class="images_carousel">
+                  <p class="text-lighter fs-3 fw-semibold mb-0">02</p>
+                  <h2 class="text-light h4">time</h2>
+                  <p class="text-lighter">
+                    we manage our projects effectively to ensure results are
+                    achieved within agree timelines
+                  </p>
+                  <p class="text-lighter">
+                    reflecting, our on going commitment to speed and accuracy
+                  </p>
+                </div> -->
               </div>
             </div>
           </ng-template>
           <ng-template carouselSlide>
-            <div>
-              <div class="images_carousel">
-                <p class="text-lighter fs-3 fw-semibold mb-0">03</p>
-                <h2 class="text-light h4">scope</h2>
-                <p class="text-lighter">
-                  we give great importance to developing and impoving our
-                  people, processes, systems and know-how
-                </p>
-                <p class="text-lighter">
-                  our aim is to achieve leadship through technical innovations,
-                  systems, and products.
-                </p>
+            <div class="images_carousel">
+              <div
+                [innerHTML]="
+                  'home.about.carousel.about.carousel.slide03' | translate
+                "
+              >
+                <!-- <div class="images_carousel">
+                  <p class="text-lighter fs-3 fw-semibold mb-0">03</p>
+                  <h2 class="text-light h4">scope</h2>
+                  <p class="text-lighter">
+                    we give great importance to developing and impoving our
+                    people, processes, systems and know-how
+                  </p>
+                  <p class="text-lighter">
+                    our aim is to achieve leadship through technical innovations,
+                    systems, and products.
+                  </p>
+                </div> -->
               </div>
             </div>
           </ng-template>
           <ng-template carouselSlide>
-            <div>
-              <div class="images_carousel">
+            <div class="images_carousel">
+              <div
+                [innerHTML]="
+                  'home.about.carousel.about.carousel.slide04' | translate
+                "
+              >
+                <!-- <div class="images_carousel">
                 <p class="text-lighter fs-3 fw-semibold mb-0">04</p>
                 <h2 class="text-light h4">quality</h2>
                 <p class="text-lighter">
@@ -74,6 +100,7 @@
                 <p class="text-lighter">
                   with the highest levels of efficiency and precision
                 </p>
+              </div> -->
               </div>
             </div>
           </ng-template>

@@ -25,11 +25,12 @@ export class AppComponent {
 
   constructor(private spinner: NgxSpinnerService) {
     this.spinner.show();
-  }
-
-  @HostListener('window:load', []) onWindowLoad() {
     setTimeout(() => {
       this.spinner.hide();
     }, 1500);
   }
+
+  // @HostListener('window:load', []) onWindowLoad() {
+
+  // }
 }

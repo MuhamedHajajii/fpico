@@ -3,10 +3,13 @@
     <div
       class="d-flex flex-column flex-lg-row text-center text-md-start align-items-center gap-3 justify-content-center col-8 mx-auto"
     >
-      <h2 class="first_title text-capitalize">
-        <p class="d-block mb-0">{{ "hero-third_title" | translate }}</p>
+      <h2
+        class="first_title text-capitalize"
+        [innerHTML]="'Home.hero' | translate"
+      >
+        <!-- <p class="d-block mb-0">{{ "hero-third_title" | translate }}</p>
         {{ "hero-eighth_title" | translate }}
-        <span>{{ "hero-fourth_title" | translate }}</span>
+        <span>{{ "hero-fourth_title" | translate }}</span> -->
       </h2>
       <h3>
         <span class="text-main display-4 fw-semibold text-capitalize"
@@ -35,7 +38,7 @@
         <span class="d-block" style="color: #a9a9a9">{{
           "hero-fifth_title2" | translate
         }}</span>
-        <span class="d-block" style="color: #a9a9a9">{{
+        <span style="color: #a9a9a9">{{
           "hero-fifth_title3" | translate
         }}</span>
       </h3>

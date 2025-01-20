@@ -19,6 +19,17 @@ html[dir="ltr"] {
 :root,
 html[dir="rtl"] {
   direction: rtl !important;
+  p,
+  h2,
+  span {
+    text-align: center !important;
+  }
+  .flex-lg-row {
+    flex-direction: row-reverse !important;
+  }
+  .justify-content-end {
+    justify-content: center !important;
+  }
   text-align: right !important;
   font-family: "Cairo", Tahoma, sans-serif !important;
 }
