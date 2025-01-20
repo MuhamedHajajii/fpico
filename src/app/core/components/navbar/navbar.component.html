@@ -4,100 +4,17 @@
       <img src="./assets/images/my-fav.ico/favicon.svg" alt="FPICO" />
     </a>
 
-    <div
-      class="collapse navbar-collapse order-1 order-lg-0"
-      id="navbarSupportedContent"
-    >
-      <!-- <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a
-            class="text-capitalize nav-link active"
-            aria-current="page"
-            target="_blank" href="#"
-            >{{ "home-navbar" | translate }}</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="text-capitalize nav-link" target="_blank" href="#">{{
-            "projects-navbar" | translate
-          }}</a>
-        </li>
-        <li class="nav-item">
-          <a class="text-capitalize nav-link" target="_blank" href="#">{{
-            "about-us-navbar" | translate
-          }}</a>
-        </li>
-        <li class="nav-item">
-          <a class="text-capitalize nav-link" target="_blank" href="#">{{
-            "services-navbar" | translate
-          }}</a>
-        </li>
-      </ul> -->
-    </div>
+    <app-navbar-routing />
 
     <div class="d-flex align-items-center gap-3">
-      <ul
-        class="list-unstyled p-0 m-0 d-none d-sm-flex social_media_links gap-2"
-      >
-        <li class="nav-link">
-          <a target="_blank" href="#">
-            <img
-              src="./assets/images/social_media_icons/facebook.png"
-              alt="FPICO facebook"
-            />
-          </a>
-        </li>
-        <li class="nav-link">
-          <a target="_blank" href="#">
-            <img
-              src="./assets/images/social_media_icons/instagram.png"
-              alt="FPICO instagram"
-            />
-          </a>
-        </li>
-        <li class="nav-link">
-          <a target="_blank" href="#">
-            <img src="./assets/images/social_media_icons/x.png" alt="FPICO x" />
-          </a>
-        </li>
-        <li class="nav-link">
-          <a target="_blank" href="#">
-            <img
-              src="./assets/images/social_media_icons/snapchat.png"
-              alt="FPICO snapchat"
-            />
-          </a>
-        </li>
-        <li class="nav-link">
-          <a target="_blank" href="#">
-            <img
-              src="./assets/images/social_media_icons/whatsapp.png"
-              alt="FPICO whatsapp"
-            />
-          </a>
-        </li>
-        <li class="nav-link">
-          <a target="_blank" href="https://www.linkedin.com/company/fpicoksa/">
-            <img
-              src="./assets/images/social_media_icons/linkedin.svg"
-              alt="FPICO whatsapp"
-            />
-          </a>
-        </li>
-      </ul>
-      <!-- <a target="_blank" href="#" class="btn btn-main py-2 d-block">{{
+      <app-social-media-links />
+      <a target="_blank" href="#" class="btn btn-main py-2 d-block">{{
         "contactus-navbar" | translate
       }}</a>
-      <select
-        [(ngModel)]="selectedLanguage"
-        (change)="onLanguageChange()"
-        class="language-select"
-      >
-        <option value="en">EN</option>
-        <option value="ar">AR</option>
-      </select> -->
+      <app-navbar-language />
     </div>
-    <!-- <button
+
+    <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
@@ -107,6 +24,6 @@
       aria-label="Toggle navigation"
     >
       <i class="fa-solid fa-bars text-white fs-3"></i>
-    </button> -->
+    </button>
   </div>
 </nav>
