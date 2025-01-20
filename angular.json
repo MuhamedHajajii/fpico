@@ -35,7 +35,9 @@
              "src/site.webmanifest",
              "src/sitemap.xml",
              "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src"
+
             ],
             "styles": [
               "node_modules/ngx-spinner/animations/ball-beat.css",
@@ -111,7 +113,8 @@
               "src/site.webmanifest",
               "src/sitemap.xml",
               "src/favicon.ico",
-               "src/assets"
+               "src/assets",
+               "src"
             ],
             "styles": [
               "node_modules/ngx-spinner/animations/ball-beat.css",
