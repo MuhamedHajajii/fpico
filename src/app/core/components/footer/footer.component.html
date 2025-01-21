@@ -8,7 +8,7 @@
       </div>
       <div class="col-md-3">
         <div>
-          <div [innerHTML]="'home.footer.col01' | translate">
+          <div>
             <!-- <h2 class="text-light h5">quick links</h2>
             <ul class="list-unstyled p-0 m-0">
               <li class="text-lighter mb-2">about us</li>
@@ -16,29 +16,35 @@
               <li class="text-lighter mb-2">projects</li>
               <li class="text-lighter mb-2">contacts</li>
             </ul> -->
+            <h2 class="text-light h5">
+              {{ "home.footer.col01-title" | translate }}
+            </h2>
+            <div [innerHTML]="'home.footer.col01' | translate"></div>
           </div>
         </div>
       </div>
       <div class="col-md-3">
-        <div [innerHTML]="'home.footer.col02' | translate">
+        <div>
           <!-- <h2 class="text-light h5">services</h2>
           <ul class="list-unstyled p-0 m-0">
             <li class="text-lighter mb-2">new builds</li>
             <li class="text-lighter mb-2">custom builds</li>
             <li class="text-lighter mb-2">project management</li>
           </ul> -->
+          <h2 class="text-light h5">
+            {{ "home.footer.col02-title" | translate }}
+          </h2>
+          <div [innerHTML]="'home.footer.col02' | translate"></div>
         </div>
       </div>
       <div class="col-md-3">
         <div>
           <div class="d-flex justify-content-between flex-column">
             <div>
-              <h2
-                [innerHTML]="'home.footer.col03' | translate"
-                class="text-light h5"
-              >
-                <!-- contact us -->
+              <h2 class="text-light h5">
+                {{ "home.footer.col03" | translate }}
               </h2>
+              <!-- contact us -->
               <div class="d-flex">
                 <p class="text-lighter mb-2 mx-2">+966 055 820 0003</p>
                 <p class="text-lighter mb-2 mx-2">+966 053 410 3237</p>
@@ -47,7 +53,7 @@
                 [innerHTML]="'home.footer.address' | translate"
                 class="text-lighter mb-2"
               >
-                king abdulaziz rd, alyasmin, riyadh 13322
+                <!-- king abdulaziz rd, alyasmin, riyadh 13322 -->
               </p>
             </div>
             <div class="d-flex align-items-center gap-3">
@@ -63,7 +69,12 @@
       >all rights reserved</span
     >
     &commat;2024
-    <img src="/assets/images/footer/db.png" style="width: 40px" alt="FPICO" />
+    <a target="_blank" href="https://digitalbondmena.com/en"
+      ><img
+        src="/assets/images/footer/db.png"
+        style="width: 40px"
+        alt="digital bond"
+    /></a>
     digital bond
   </div>
 </footer>

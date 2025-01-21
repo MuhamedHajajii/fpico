@@ -5,8 +5,10 @@
       class="section_bg p-3 my-5 d-flex align-items-center"
     >
       <div class="text-capitalize">
-        <h2 class="display-1 text-white fw-light mt-5">
-          {{ "home.contactus" | translate }}
+        <h2
+          [innerHTML]="'home.contactus' | translate"
+          class="display-1 text-white fw-light mt-5"
+        >
           <!-- Ready To
           <span class="d-block"> Build Together </span> -->
         </h2>
