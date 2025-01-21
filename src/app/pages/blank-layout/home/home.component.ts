@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AHeroSectionComponent } from './a-hero-section/a-hero-section.component';
 import { BManagerMessageComponent } from './b-manager-message/b-manager-message.component';
 import { CAboutUsComponent } from './c-about-us/c-about-us.component';
@@ -9,6 +9,7 @@ import { GOurProjectsComponent } from './g-our-projects/g-our-projects.component
 import { KOurPartnersComponent } from './k-our-partners/k-our-partners.component';
 import { LOurWorkComponent } from './l-our-work/l-our-work.component';
 import { MContactUsComponent } from './m-contact-us/m-contact-us.component';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -28,4 +29,19 @@ import { MContactUsComponent } from './m-contact-us/m-contact-us.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  isRTL: boolean = false;
+
+  constructor(private _TranslateService: TranslateService) {}
+
+  ngOnInit(): void {
+    this._TranslateService.onLangChange.subscribe((params: LangChangeEvent) => {
+      console.log(params);
+      if (params.lang === 'ar') {
+        this.isRTL = true;
+      } else {
+        this.isRTL = false;
+      }
+    });
+  }
+}

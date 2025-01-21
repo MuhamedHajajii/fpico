@@ -1,5 +1,9 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import {
+  provideRouter,
+  withInMemoryScrolling,
+  withViewTransitions,
+} from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
@@ -13,7 +17,11 @@ import { IMAGE_CONFIG } from '@angular/common';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideSpinnerConfig({ type: 'ball-scale-multiple' }),
-    provideRouter(routes),
+    provideRouter(
+      routes,
+      withInMemoryScrolling({ scrollPositionRestoration: 'enabled' }),
+      withViewTransitions()
+    ),
     provideClientHydration(),
     importProvidersFrom(TranslateModule.forRoot(provideTranslation())),
     provideHttpClient(withFetch()),

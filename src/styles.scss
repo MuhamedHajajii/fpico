@@ -12,14 +12,23 @@ body {
 }
 :root,
 html[dir="ltr"] {
-  direction: ltr !important;
-  text-align: left !important;
+  // direction: ltr !important;
+  // text-align: left !important;
   font-family: "Inter", Arial, sans-serif !important;
+  body {
+    // direction: ltr !important;
+    // text-align: left !important;
+    font-family: "Inter", Arial, sans-serif !important;
+  }
 }
 :root,
-html[dir="rtl"] {
-  direction: rtl !important;
-
-  text-align: right !important;
+:host[dir="rtl"] {
+  // direction: rtl !important;
+  // text-align: right !important;
   font-family: "Cairo", Tahoma, sans-serif !important;
+  body {
+    // direction: rtl !important;
+    // text-align: right !important;
+    font-family: "Cairo", Tahoma, sans-serif !important;
+  }
 }

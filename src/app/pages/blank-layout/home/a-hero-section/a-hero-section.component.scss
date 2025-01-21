@@ -13,3 +13,17 @@
   left: -115px;
   z-index: -1;
 }
+:root,
+html[dir="rtl"] {
+  // direction: rtl !important;
+  // text-align: right !important;
+  font-family: "Cairo", Tahoma, sans-serif !important;
+  body {
+    .flex-lg-row {
+      flex-direction: row-reverse !important;
+    }
+    .text-md-start {
+      text-align: right !important;
+    }
+  }
+}

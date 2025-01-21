@@ -3,7 +3,8 @@
     <div class="row">
       <div class="col-md-4">
         <header
-          class="text-center text-lg-start"
+          [class]="{ 'text-lg-end': isRTL, 'text-lg-start': !isRTL }"
+          class="text-center"
           [innerHTML]="'home.clients.text' | translate"
         >
           <!-- <h2 class="text-light"><span class="text-main">our</span> clients</h2>

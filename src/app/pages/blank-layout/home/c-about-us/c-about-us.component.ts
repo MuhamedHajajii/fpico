@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -8,4 +8,6 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './c-about-us.component.html',
   styleUrl: './c-about-us.component.scss',
 })
-export class CAboutUsComponent {}
+export class CAboutUsComponent {
+  @Input() isRTL: boolean = false;
+}

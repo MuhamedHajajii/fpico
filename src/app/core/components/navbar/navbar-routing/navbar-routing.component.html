@@ -1,31 +1,36 @@
-<div
-  class="collapse navbar-collapse order-1 order-lg-0"
-  id="navbarSupportedContent"
->
-  <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-    <li class="nav-item">
-      <a
-        class="text-capitalize nav-link active"
-        aria-current="page"
-        target="_blank"
-        href="#"
-        >{{ "Navbar.routes-home" | translate }}</a
-      >
-    </li>
-    <li class="nav-item">
-      <a class="text-capitalize nav-link" target="_blank" href="#">{{
-        "Navbar.projects" | translate
-      }}</a>
-    </li>
-    <li class="nav-item">
-      <a class="text-capitalize nav-link" target="_blank" href="#">{{
-        "Navbar.about-us" | translate
-      }}</a>
-    </li>
-    <li class="nav-item">
-      <a class="text-capitalize nav-link" target="_blank" href="#">{{
-        "services-navbar" | translate
-      }}</a>
-    </li>
-  </ul>
-</div>
+<ul class="navbar-nav m-auto mb-2 mb-lg-0">
+  <li class="nav-item">
+    <a
+      class="text-capitalize nav-link active"
+      aria-current="page"
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >{{ "Pages.Home.navbar.navigations.home" | translate }}</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      class="text-capitalize nav-link"
+      routerLink="/projects"
+      routerLinkActive="active"
+      >{{ "Pages.Home.navbar.navigations.projects" | translate }}</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      class="text-capitalize nav-link"
+      routerLink="/about-us"
+      routerLinkActive="active"
+      >{{ "Pages.Home.navbar.navigations.aboutUs" | translate }}</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      class="text-capitalize nav-link"
+      routerLink="/services"
+      routerLinkActive="active"
+      >{{ "Pages.Home.navbar.navigations.services" | translate }}</a
+    >
+  </li>
+</ul>

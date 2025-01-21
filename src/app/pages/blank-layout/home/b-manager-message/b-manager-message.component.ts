@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -8,4 +8,6 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './b-manager-message.component.html',
   styleUrl: './b-manager-message.component.scss',
 })
-export class BManagerMessageComponent {}
+export class BManagerMessageComponent {
+  @Input() isRTL: boolean = false;
+}

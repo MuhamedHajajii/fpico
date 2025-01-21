@@ -1,0 +1,181 @@
+<div class="p-3">
+  <div class="mb-3">
+    <p class="my-1 fw-bold title__fonts__normal h4">
+      {{ "contact-us-page.form.title" | translate }}
+    </p>
+  </div>
+  <form [formGroup]="messagesForm" (ngSubmit)="onSubmit()">
+    <div class="row g-3">
+      <!-- input field: userName  -->
+      <div class="col-md-12">
+        <div>
+          <div class="text-end">
+            @if (messagesForm.get('name')?.getError("required") &&
+            startValidation) {
+            <small class="text-danger fst-italic"
+              >{{
+                "contact-us-page.form.validation.required" | translate
+              }}*</small
+            >
+            } @if (messagesForm.get('name')?.getError("pattern") &&
+            startValidation) {
+            <small class="text-danger fst-italic"
+              >{{ "contact-us-page.form.validation.name" | translate }}*</small
+            >
+            } @if (messagesForm.get('name')?.getError("minlength") &&
+            startValidation) {
+            <small class="text-danger fst-italic"
+              >{{
+                "contact-us-page.form.validation.name02" | translate
+              }}*</small
+            >
+            }
+          </div>
+          <div>
+            <input
+              [ngClass]="{
+                'is-invalid':
+                  startValidation &&
+                  (messagesForm.get('name')?.getError('required') ||
+                    messagesForm.get('name')?.getError('pattern'))
+              }"
+              type="text"
+              class="form-control"
+              id="name"
+              [placeholder]="isRTL ? 'الاسم بالكامل' : 'full name'"
+              formControlName="name"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- input field: userEmail  -->
+      <div class="col-md-12">
+        <div>
+          <div class="text-end">
+            @if (messagesForm.get('email')?.getError("required") &&
+            startValidation) {
+            <small class="text-danger fst-italic"
+              >{{
+                "contact-us-page.form.validation.required" | translate
+              }}*</small
+            >
+            } @if (messagesForm.get('email')?.getError("email") &&
+            startValidation) {
+            <small class="text-danger fst-italic"
+              >{{ "contact-us-page.form.validation.email" | translate }}*</small
+            >
+            }
+          </div>
+          <div>
+            <input
+              [ngClass]="{
+                'is-invalid':
+                  startValidation &&
+                  (messagesForm.get('email')?.getError('required') ||
+                    messagesForm.get('email')?.getError('email'))
+              }"
+              type="email"
+              class="form-control"
+              id="email"
+              formControlName="email"
+              [placeholder]="isRTL ? 'البريد الالكترونى' : 'e-mail'"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- input field: userPhone  -->
+      <div class="col-md-12">
+        <div>
+          <div class="text-end">
+            @if (messagesForm.get('phone')?.getError("required") &&
+            startValidation) {
+            <small class="text-danger fst-italic"
+              >{{
+                "contact-us-page.form.validation.required" | translate
+              }}*</small
+            >
+            } @if (messagesForm.get('phone')?.errors && startValidation &&
+            phone.value?.length || 0 > 0) {
+            <small class="text-danger fst-italic"
+              >{{ "contact-us-page.form.validation.phone" | translate }}*</small
+            >
+            }
+          </div>
+          <ngx-intl-tel-input
+            #phone
+            [cssClass]="
+              startValidation && messagesForm.get('phone')?.errors
+                ? 'form-control h-100 py-3 is-invalid ' +
+                  (isRTL ? 'text-end' : 'text-start')
+                : 'form-control h-100 py-3 ' +
+                  (isRTL ? 'text-end' : 'text-start')
+            "
+            [preferredCountries]="[CountryISO.SaudiArabia]"
+            [enableAutoCountrySelect]="false"
+            [enablePlaceholder]="true"
+            [customPlaceholder]="isRTL ? 'رقم الهاتف' : 'phone'"
+            [searchCountryFlag]="true"
+            [searchCountryField]="[
+              SearchCountryField.Iso2,
+              SearchCountryField.Name
+            ]"
+            [selectFirstCountry]="false"
+            [selectedCountryISO]="CountryISO.SaudiArabia"
+            [maxLength]="15"
+            [phoneValidation]="true"
+            name="phone"
+            formControlName="phone"
+          ></ngx-intl-tel-input>
+        </div>
+      </div>
+      <!-- input field: userSelectService  -->
+      <div class="col-md-12">
+        <div class=""></div>
+      </div>
+      <!-- input field: userMessage  -->
+      <div class="col-md-12">
+        <div>
+          <div class="text-end">
+            @if (messagesForm.get('message')?.getError("required") &&
+            startValidation) {
+            <small class="text-danger fst-italic"
+              >{{
+                "contact-us-page.form.validation.required" | translate
+              }}*</small
+            >
+            } @if (messagesForm.get('message')?.getError("minlength") &&
+            startValidation) {
+            <small class="text-danger fst-italic"
+              >{{
+                "contact-us-page.form.validation.message" | translate
+              }}*</small
+            >
+            }
+          </div>
+          <div>
+            <textarea
+              [ngClass]="{
+                'is-invalid':
+                  startValidation &&
+                  messagesForm.get('message')?.getError('required')
+              }"
+              style="height: 80px"
+              class="form-control"
+              [placeholder]="isRTL ? 'اكتب رسالتك...' : 'message...'"
+              id="message"
+              formControlName="message"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <!-- submit button  -->
+      <div class="col-md-12 text-center text-md-start">
+        <button
+          class="btn-main btn px-4 title__fonts fw-normal rounded-1 py-3 text-uppercase fs-14 w-100"
+        >
+          {{ "contact-us-page.form.button" | translate }}
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

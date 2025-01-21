@@ -19,7 +19,8 @@
             </p> -->
           </div>
           <img
-            class="position-absolute top-0 end-0 m-3"
+            [class]="{ 'start-0': isRTL, 'end-0': !isRTL }"
+            class="position-absolute top-0 m-3"
             src="./assets/images/DownloadSection/logo-light.png"
             alt="FPICO"
           />

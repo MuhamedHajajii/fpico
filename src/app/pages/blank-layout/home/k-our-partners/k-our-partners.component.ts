@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -8,4 +8,6 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './k-our-partners.component.html',
   styleUrl: './k-our-partners.component.scss',
 })
-export class KOurPartnersComponent {}
+export class KOurPartnersComponent {
+  @Input() isRTL: boolean = false;
+}

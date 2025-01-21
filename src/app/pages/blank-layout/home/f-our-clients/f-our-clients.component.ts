@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -8,4 +8,6 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './f-our-clients.component.html',
   styleUrl: './f-our-clients.component.scss',
 })
-export class FOurClientsComponent {}
+export class FOurClientsComponent {
+  @Input() isRTL: boolean = false;
+}

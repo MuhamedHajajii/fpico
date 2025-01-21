@@ -27,13 +27,12 @@ export class NavbarLanguageComponent {
     }, 0);
   }
   onLanguageChange() {
-    // this._NgxSpinnerService.show();
-    // if (isPlatformBrowser(this._PLATFORM_ID)) {
+    this._NgxSpinnerService.show();
     this.translateService.use(this.selectedLanguage).subscribe({
       next: (response) => {
-        // setTimeout(() => {
-        //   this._NgxSpinnerService.hide();
-        // }, 1500);
+        setTimeout(() => {
+          this._NgxSpinnerService.hide();
+        }, 1500);
       },
     });
 
@@ -48,5 +47,4 @@ export class NavbarLanguageComponent {
       this.selectedLanguage
     );
   }
-  // }
 }
