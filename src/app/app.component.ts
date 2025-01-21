@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { NavbarComponent } from './core/components/navbar/navbar.component';
 import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -23,14 +24,13 @@ import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
 export class AppComponent {
   title = 'fipco';
 
-  constructor(private spinner: NgxSpinnerService) {
+  constructor(private spinner: NgxSpinnerService) {}
+
+  ngOnInit(): void {
     this.spinner.show();
-    setTimeout(() => {
-      this.spinner.hide();
-    }, 1500);
   }
 
-  // @HostListener('window:load', []) onWindowLoad() {
-
-  // }
+  @HostListener('window:load') onLoad() {
+    timer(1000).subscribe(() => this.spinner.hide());
+  }
 }

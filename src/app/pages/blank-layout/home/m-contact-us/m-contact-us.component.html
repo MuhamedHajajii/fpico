@@ -5,24 +5,18 @@
       class="section_bg p-3 my-5 d-flex align-items-center"
     >
       <div class="text-capitalize">
-        <h2
-          [innerHTML]="'home.contactus' | translate"
-          class="display-1 text-white fw-light mt-5"
-        >
+        <h2 class="display-1 text-white fw-light mt-5">
+          {{ "home.contactus" | translate }}
           <!-- Ready To
           <span class="d-block"> Build Together </span> -->
         </h2>
         <div class="text-capitalize mt-4">
-          <button
-            [innerHTML]="'home.contact-us.btn01' | translate"
-            class="text-capitalize btn-third btn mx-2 mb-3"
-          >
+          <button class="text-capitalize btn-third btn mx-2 mb-3">
+            {{ "home.contact-us.btn01" | translate }}
             <!-- build a project with us -->
           </button>
-          <button
-            [innerHTML]="'home.contact-us.btn02' | translate"
-            class="text-capitalize btn-third btn mx-2 mb-3"
-          >
+          <button class="text-capitalize btn-third btn mx-2 mb-3">
+            {{ "home.contact-us.btn02" | translate }}
             <!-- build a career with us -->
           </button>
         </div>

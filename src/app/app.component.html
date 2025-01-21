@@ -1,17 +1,18 @@
-@defer {
-<app-navbar />
-<main>
-  <router-outlet />
-</main>
-<app-footer />
-}
+<!-- Spinner Module -->
 <ngx-spinner
   [disableAnimation]="true"
-  [showSpinner]="true"
   bdColor="rgba(0, 0, 0)"
   size="medium"
   color="#fff"
+  [zIndex]="9999"
   type="ball-scale-multiple"
 >
   <img src="./assets/images/my-fav.ico/favicon.svg" alt="FPICO" />
 </ngx-spinner>
+
+<!-- Main Content -->
+<app-navbar />
+<main>
+  <router-outlet />
+</main>
+<!-- <app-footer /> -->
