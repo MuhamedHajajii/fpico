@@ -5,7 +5,10 @@ import { HomeComponent } from './pages/blank-layout/home/home.component';
 export const routes: Routes = [
   {
     path: '',
-    component: BlankLayoutComponent,
+    loadComponent: () =>
+      import('./pages/blank-layout/blank-layout.component').then(
+        (m) => m.BlankLayoutComponent
+      ),
     children: [
       {
         path: '',
