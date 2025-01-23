@@ -28,9 +28,8 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.spinner.show();
-  }
-
-  @HostListener('window:load') onLoad() {
-    timer(1000).subscribe(() => this.spinner.hide());
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 1500);
   }
 }
