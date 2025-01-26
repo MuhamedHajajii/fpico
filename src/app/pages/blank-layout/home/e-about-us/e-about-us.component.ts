@@ -5,11 +5,12 @@ import {
   TranslateService,
 } from '@ngx-translate/core';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { SafeHtmlPipe } from '../../../../core/pipes/safe-html.pipe';
 
 @Component({
   selector: 'app-e-about-us',
   standalone: true,
-  imports: [CarouselModule, TranslateModule],
+  imports: [CarouselModule, TranslateModule, SafeHtmlPipe],
   templateUrl: './e-about-us.component.html',
   styleUrl: './e-about-us.component.scss',
 })

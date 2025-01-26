@@ -1,6 +1,6 @@
 <section class="text-capitalize my-5 text-center">
   <div class="container">
-    <header [innerHTML]="'home.services-title' | translate">
+    <header [innerHTML]="'home.services-title' | translate | safeHtml">
       <!-- <h2 class="text-light"><span class="text-main">our</span> services</h2>
       <p class="text-lighter">
         we offer a comprehensive range of construction services designed to meet

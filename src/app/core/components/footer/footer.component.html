@@ -19,7 +19,7 @@
             <h2 class="text-light h5">
               {{ "home.footer.col01-title" | translate }}
             </h2>
-            <div [innerHTML]="'home.footer.col01' | translate"></div>
+            <div [innerHTML]="'home.footer.col01' | translate | safeHtml"></div>
           </div>
         </div>
       </div>
@@ -34,7 +34,7 @@
           <h2 class="text-light h5">
             {{ "home.footer.col02-title" | translate }}
           </h2>
-          <div [innerHTML]="'home.footer.col02' | translate"></div>
+          <div [innerHTML]="'home.footer.col02' | translate | safeHtml"></div>
         </div>
       </div>
       <div class="col-md-3">
@@ -54,7 +54,7 @@
                 </p>
               </div>
               <p
-                [innerHTML]="'home.footer.address' | translate"
+                [innerHTML]="'home.footer.address' | translate | safeHtml"
                 class="text-lighter mb-2"
               >
                 <!-- king abdulaziz rd, alyasmin, riyadh 13322 -->
@@ -69,7 +69,7 @@
     </div>
   </div>
   <div class="text-lighter text-center py-3">
-    <span [innerHTML]="'home.footer.db-text' | translate"
+    <span [innerHTML]="'home.footer.db-text' | translate | safeHtml"
       >all rights reserved</span
     >
     &commat;2024

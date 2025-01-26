@@ -4,7 +4,7 @@
       <div class="col-md-4">
         <header
           [class]="{ 'text-lg-end': isRTL, 'text-lg-start': !isRTL }"
-          [innerHTML]="'home.partners.text' | translate"
+          [innerHTML]="'home.partners.text' | translate | safeHtml"
           class="text-center"
         >
           <!-- <h2 class="text-light">
@@ -93,15 +93,23 @@
         class="bg-black bg-opacity-50 position-absolute top-0 start-0 end-0 bottom-0"
       ></span>
       <div
-        [innerHTML]="'home.knowmore.text' | translate"
         class="position-absolute text-center top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center text-capitalize"
       >
-        <!-- <div>
-          <h2 class="text-white display-5 fw-bold">
-            would you like to know more about
-            <span class="text-uppercase text-main fw-bold">fPICO</span>?
-          </h2>
-          <img src="./assets/images/DownloadSection/see_more.png" alt="FPICO" />
+        <div>
+          <h2
+            class="text-white display-5 fw-bold"
+            [innerHTML]="
+              'Pages.Home.download-pdf-section.title' | translate | safeHtml
+            "
+          ></h2>
+          <!-- <img src="./assets/images/DownloadSection/see_more.png" alt="FPICO" /> -->
+          <div
+            [innerHTML]="
+              'Pages.Home.download-pdf-section.see-more-pic'
+                | translate
+                | safeHtml
+            "
+          ></div>
           <img
             class="d-block my-2"
             style="transform: translateX(85%)"
@@ -110,16 +118,16 @@
           />
           <div>
             <a
-              style="border-radius: 5px !important"
+              class="btn btn-main rounded-1 px-5 py-3 btn-animation custom-btn"
               href="https://drive.google.com/file/d/1Jdd-B8aKXb1PdidXgPYkSVANHjljP2bz/view"
-              class="btn btn-main rounded-1 px-5 py-3 btn-animation"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Download PDF"
             >
-              Click Here
+              {{ "Pages.Home.download-pdf-section.click-btn" | translate }}
             </a>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>

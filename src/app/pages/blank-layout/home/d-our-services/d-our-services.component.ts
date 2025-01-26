@@ -6,11 +6,12 @@ import {
   TranslateModule,
   TranslateService,
 } from '@ngx-translate/core';
+import { SafeHtmlPipe } from '../../../../core/pipes/safe-html.pipe';
 
 @Component({
   selector: 'app-d-our-services',
   standalone: true,
-  imports: [CarouselModule, TranslateModule],
+  imports: [CarouselModule, TranslateModule, SafeHtmlPipe],
   templateUrl: './d-our-services.component.html',
   styleUrl: './d-our-services.component.scss',
 })

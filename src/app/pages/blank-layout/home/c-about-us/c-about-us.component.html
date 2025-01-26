@@ -5,7 +5,7 @@
         class="col-md-4 position-relative d-flex justify-content-center align-items-center"
       >
         <div>
-          <div [innerHTML]="'home.about-first-section' | translate">
+          <div [innerHTML]="'home.about-first-section' | translate | safeHtml">
             <!-- <h2 class="mb-5">
               <span class="rounded-1 p-3 fs-18" style="background: #303030"
                 >about fpico</span
@@ -46,7 +46,7 @@
       <div
         class="col-md-4 position-relative d-flex justify-content-center align-items-center flex-column"
       >
-        <div [innerHTML]="'home.about.second-section' | translate">
+        <div [innerHTML]="'home.about.second-section' | translate | safeHtml">
           <!-- <div>
             <h3 class="mb-3">our mission</h3>
             <p class="text-lighter">

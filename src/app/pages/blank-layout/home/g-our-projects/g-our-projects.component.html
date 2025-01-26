@@ -1,6 +1,6 @@
 <section class="text-capitalize">
   <div class="container text-center">
-    <header [innerHTML]="'home.projects.text' | translate">
+    <header [innerHTML]="'home.projects.text' | translate | safeHtml">
       <!-- <h2 class="text-light">
         <span class="text-main">our</span> summary projects
       </h2>
