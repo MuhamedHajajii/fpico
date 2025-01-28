@@ -23,7 +23,6 @@ exec(
   "./node_modules/purgecss/bin/purgecss.js -css ./dist/fipco/browser/*.css --content ./dist/fipco/browser/index.html ./dist/fipco/browser/*.js -o ./dist/fipco/browser/",
   function (error, stdout, stderr) {
     console.log("PurgeCSS done");
-    console.log();
 
     for (let d of data) {
       // get new file size

@@ -1,1 +1,115 @@
-<p>services works!</p>
+<section class="text-capitalize my-5">
+  <div class="container text-white">
+    <!-- section and title -->
+    <div class="row justify-content-center">
+      <div class="col-12 row align-items-center">
+        <app-pages-header
+          [title]="'Pages.services.title'"
+          [title02]="'Pages.services.title02'"
+          [desc01]="'Pages.services.title-desc01'"
+          [desc02]="'Pages.services.title-desc02'"
+        ></app-pages-header>
+      </div>
+
+      <!-- Home Main Image -->
+      <div class="col-12">
+        <div class="my-5">
+          <img
+            class="w-100 banner-animation"
+            src="./assets/images/services/page/main_image.png"
+            alt="FPICO"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Section -->
+    <div class="row">
+      <!-- section Text -->
+      <div class="col-md-7 d-flex justify-content-center align-items-center">
+        <div>
+          <h3
+            class="text-lighter fs-15 lh-lg mb-3"
+            [innerHTML]="
+              'Pages.services.second-section.first-text' | translate | safeHtml
+            "
+          ></h3>
+          <p class="text-lighter fs-15 lh-lg">
+            {{ "Pages.services.second-section.second-text" | translate }}
+          </p>
+        </div>
+      </div>
+
+      <!-- section Image -->
+      <div class="col-md-5">
+        <div>
+          <figure class="image_border p-2">
+            <img
+              src="./assets/images/services/page/second_image.png"
+              class="w-100"
+              alt="FPICO"
+            />
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 my-5">
+      @for (slider of servicesContent.services_page; track $index) {
+      <div class="col-md-6 col-lg-3 rounded-2 mb-4">
+        <div>
+          <figure class="images_carousel card bg-transparent">
+            <div #card_container class="overflow-hidden border-radius-10">
+              <img
+                #img
+                (load)="imageLoaded(card_container)"
+                class="w-100 h-100 rounded-2 main_image border-radius-10"
+                [src]="slider.image_url"
+                [alt]="slider.title | translate"
+              />
+            </div>
+            <span
+              class="placeholder bg-opacity-100 position-absolute top-0 start-0 end-0 bottom-0"
+            ></span>
+            <figcaption class="card-img-overlay">
+              <span
+                style="width: 80%;font-size:13px'"
+                class="bg-white rounded-3 overflow-hidden text-center position-absolute bottom-0 start-50 translate-middle-x text-nowrap px-3 py-2 fs-13 mb-3 fw-bold"
+                >{{ slider.title | translate }}</span
+              >
+              <div
+                class="card_hidden_content position-absolute bottom-0 start-0 p-3 card_text border-radius-10 text-capitalize"
+              >
+                <p class="text-white mb-1">
+                  {{ slider.inner_title | translate }}
+                </p>
+                <p class="text-lighter fs-13">
+                  {{ slider.inner_desc | translate }}
+                </p>
+                <a
+                  [routerLink]="['/services-details', slider.id]"
+                  href="#"
+                  class="btn btn-main w-100 d-flex justify-content-between align-items-center text-decoration-none"
+                >
+                  {{ "More Details" | translate }}
+                  <img
+                    [class]="{ rotate_moreDetails_Button: isRTL }"
+                    src="./assets/images/services/arrow-right.png"
+                    width="25px"
+                    alt="button arrow right"
+                  />
+                </a>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      }
+    </div>
+
+    <!-- Download PDF section -->
+    <div class="my-5">
+      <app-h-download-pdf-section></app-h-download-pdf-section>
+    </div>
+  </div>
+</section>

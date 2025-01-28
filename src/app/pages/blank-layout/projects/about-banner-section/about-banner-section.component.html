@@ -1,0 +1,13 @@
+<div class="my-5">
+  <div class="row g-4">
+    @for (data of ourProjectsBannerData; track $index) {
+    <div class="col-md-3">
+      <div class="bg-fourth rounded-2 p-4 h-100">
+        <img [src]="data.icon" [alt]="data.title | translate" />
+        <p class="my-3">{{ data.title | translate }}</p>
+        <p class="m-0 text-lighter fs-13">{{ data.text | translate }}</p>
+      </div>
+    </div>
+    }
+  </div>
+</div>

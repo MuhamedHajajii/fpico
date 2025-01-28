@@ -40,7 +40,6 @@ export class EAboutUsComponent {
   constructor(private _TranslateService: TranslateService) {}
   ngOnInit(): void {
     this._TranslateService.onLangChange.subscribe((params: LangChangeEvent) => {
-      console.log(params);
       if (params.lang === 'ar') {
         this.customOptions = {
           ...this.customOptions,
@@ -53,5 +52,16 @@ export class EAboutUsComponent {
         };
       }
     });
+    if (this._TranslateService.currentLang === 'ar') {
+      this.customOptions = {
+        ...this.customOptions,
+        rtl: true,
+      };
+    } else {
+      this.customOptions = {
+        ...this.customOptions,
+        rtl: false,
+      };
+    }
   }
 }

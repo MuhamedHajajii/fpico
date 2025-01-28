@@ -84,12 +84,16 @@ export class ContactUsFormComponent {
 
   ngOnInit(): void {
     this._TranslateService.onLangChange.subscribe((params: LangChangeEvent) => {
-      console.log(params);
       if (params.lang === 'ar') {
         this.isRTL = true;
       } else {
         this.isRTL = false;
       }
     });
+    if (this._TranslateService.currentLang === 'ar') {
+      this.isRTL = true;
+    } else {
+      this.isRTL = false;
+    }
   }
 }

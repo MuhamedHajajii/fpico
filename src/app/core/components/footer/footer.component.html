@@ -9,32 +9,64 @@
       <div class="col-md-3">
         <div>
           <div>
-            <!-- <h2 class="text-light h5">quick links</h2>
-            <ul class="list-unstyled p-0 m-0">
-              <li class="text-lighter mb-2">about us</li>
-              <li class="text-lighter mb-2">services</li>
-              <li class="text-lighter mb-2">projects</li>
-              <li class="text-lighter mb-2">contacts</li>
-            </ul> -->
             <h2 class="text-light h5">
-              {{ "home.footer.col01-title" | translate }}
+              {{ "footer.col02.title" | translate }}
             </h2>
-            <div [innerHTML]="'home.footer.col01' | translate | safeHtml"></div>
+            <ul class="list-unstyled p-0 m-0">
+              <li class="mb-2">
+                <a
+                  class="text-decoration-none text-lighter"
+                  routerLink="/about-us"
+                  href="#"
+                >
+                  {{ "footer.col02.row01" | translate }}
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  class="text-decoration-none text-lighter"
+                  routerLink="/services"
+                  href="#"
+                >
+                  {{ "footer.col02.row02" | translate }}
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  class="text-decoration-none text-lighter"
+                  routerLink="/projects"
+                  href="#"
+                >
+                  {{ "footer.col02.row03" | translate }}
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  class="text-decoration-none text-lighter"
+                  routerLink="/contact-us"
+                  href="#"
+                >
+                  {{ "footer.col02.row04" | translate }}
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
       <div class="col-md-3">
         <div>
-          <!-- <h2 class="text-light h5">services</h2>
+          <h2 class="text-light h5">{{ "footer.col-3.title" | translate }}</h2>
           <ul class="list-unstyled p-0 m-0">
-            <li class="text-lighter mb-2">new builds</li>
-            <li class="text-lighter mb-2">custom builds</li>
-            <li class="text-lighter mb-2">project management</li>
-          </ul> -->
-          <h2 class="text-light h5">
-            {{ "home.footer.col02-title" | translate }}
-          </h2>
-          <div [innerHTML]="'home.footer.col02' | translate | safeHtml"></div>
+            <li class="text-lighter mb-2">
+              {{ "footer.col-3.row01" | translate }}
+            </li>
+            <li class="text-lighter mb-2">
+              {{ "footer.col-3.row02" | translate }}
+            </li>
+            <li class="text-lighter mb-2">
+              {{ "footer.col-3.row03" | translate }}
+            </li>
+          </ul>
         </div>
       </div>
       <div class="col-md-3">
@@ -42,22 +74,19 @@
           <div class="d-flex justify-content-between flex-column">
             <div>
               <h2 class="text-light h5">
-                {{ "home.footer.col03" | translate }}
+                {{ "footer.col04.title" | translate }}
               </h2>
               <!-- contact us -->
               <div>
                 <p class="text-lighter mb-2">
-                  {{ "home.footer.num01" | translate }}
+                  {{ "footer.col04.mobile01" | translate }}
                 </p>
                 <p class="text-lighter mb-2">
-                  {{ "home.footer.num02" | translate }}
+                  {{ "footer.col04.mobile02" | translate }}
                 </p>
               </div>
-              <p
-                [innerHTML]="'home.footer.address' | translate | safeHtml"
-                class="text-lighter mb-2"
-              >
-                <!-- king abdulaziz rd, alyasmin, riyadh 13322 -->
+              <p class="text-lighter mb-2">
+                {{ "footer.col04.address" | translate }}
               </p>
             </div>
             <div class="d-flex align-items-center gap-3">
@@ -69,9 +98,7 @@
     </div>
   </div>
   <div class="text-lighter text-center py-3">
-    <span [innerHTML]="'home.footer.db-text' | translate | safeHtml"
-      >all rights reserved</span
-    >
+    <span>{{ "footer.db-copy-rights.title" | translate }}</span>
     &commat;2024
     <a target="_blank" href="https://digitalbondmena.com/en"
       ><img

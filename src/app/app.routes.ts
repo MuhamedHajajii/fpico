@@ -25,7 +25,7 @@ export const routes: Routes = [
             (m) => m.ProjectsComponent
           ),
         data: {
-          title: 'Projects',
+          title: 'projects',
           description: 'Explore our various projects and initiatives.',
         },
       },
@@ -46,6 +46,17 @@ export const routes: Routes = [
           import('./pages/blank-layout/services/services.component').then(
             (m) => m.ServicesComponent
           ),
+        data: {
+          title: 'Services',
+          description: 'Learn more about the services we offer.',
+        },
+      },
+      {
+        path: 'services-details/:id',
+        loadComponent: () =>
+          import(
+            './pages/blank-layout/services-details/services-details.component'
+          ).then((m) => m.ServicesDetailsComponent),
         data: {
           title: 'Services',
           description: 'Learn more about the services we offer.',

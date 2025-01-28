@@ -1,0 +1,99 @@
+<section class="text-capitalize my-5">
+  <div class="container text-white">
+    <!-- section and title -->
+    <div class="row justify-content-center">
+      <div class="col-12 row align-items-center">
+        <app-pages-header
+          [title]="'Pages.services.title'"
+          [title02]="'Pages.services.title02'"
+          [desc01]="'Pages.services.title-desc01'"
+          [desc02]="'Pages.services.title-desc02'"
+        ></app-pages-header>
+      </div>
+    </div>
+
+    <!-- Second Section -->
+    <div class="Details_related_images_bg">
+      <div class="row">
+        <!-- section Text -->
+        <div class="col-md-7 d-flex justify-content-center align-items-center">
+          <div>
+            <h3
+              class="text-lighter fs-15 lh-lg mb-3"
+              [innerHTML]="
+                'Pages.services.second-section.first-text'
+                  | translate
+                  | safeHtml
+              "
+            ></h3>
+            <p class="text-lighter fs-15 lh-lg">
+              {{ "Pages.services.second-section.second-text" | translate }}
+            </p>
+          </div>
+        </div>
+        <!-- section Image -->
+        <div class="col-md-5">
+          <div>
+            <figure class="image_border p-2">
+              <img
+                src="./assets/images/services/page/second_image.png"
+                class="w-100"
+                alt="FPICO"
+              />
+            </figure>
+          </div>
+        </div>
+        <!-- Details Image -->
+        <div class="my-5">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="row h-100 gx-4">
+                <div class="col-md-6 mb-4">
+                  <div class="h-100">
+                    <img
+                      class="w-100 h-100 object-fit-cover border-radius-10"
+                      src="./assets/images/details/2.png"
+                      alt="FPICO"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="h-100">
+                    <img
+                      class="w-100 h-100 object-fit-cover border-radius-10"
+                      src="./assets/images/details/3.png"
+                      alt="FPICO"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="h-100">
+                    <img
+                      class="w-100 h-100 object-fit-cover border-radius-10"
+                      src="./assets/images/details/4.png"
+                      alt="FPICO"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <img
+                  class="w-100 h-500 object-fit-cover border-radius-10"
+                  src="./assets/images/details/1.png"
+                  alt="FPICO"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download PDF section -->
+    <div class="my-5">
+      <app-h-download-pdf-section></app-h-download-pdf-section>
+    </div>
+  </div>
+</section>

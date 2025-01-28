@@ -1,114 +1,40 @@
 <section class="text-capitalize">
   <div class="container text-center">
-    <header [innerHTML]="'home.projects.text' | translate | safeHtml">
-      <!-- <h2 class="text-light">
-        <span class="text-main">our</span> summary projects
-      </h2>
+    <header>
+      <h2
+        class="text-light"
+        [innerHTML]="
+          'Pages.Home.our-projects-section.title' | translate | safeHtml
+        "
+      ></h2>
       <p class="text-lighter">
-        part of our professionally outlined projects
-        <span class="d-block"
-          >which we worked on with all dilligence,professionalism, and interest
-          in every project</span
-        >
-      </p> -->
+        {{ "Pages.Home.our-projects-section.title-desc" | translate }}
+        <span class="d-block">{{
+          "Pages.Home.our-projects-section.title-desc02" | translate
+        }}</span>
+      </p>
     </header>
     <div class="row g-3">
+      @for (project of homeProjects; track $index) {
       <div class="col-md-4">
-        <div class="card bg-transparent">
-          <img
-            class="border-radius-10 w-100"
-            src="./assets/images/projects/1.png"
-            alt="FPICO"
-          />
-          <div
-            class="card-img-overlay w-100 h-100 d-flex justify-content-center align-items-center bg-black bg-opacity-50"
-          >
-            <h3 class="text-white">
-              {{ "home.projects.project01" | translate }}
-            </h3>
+        <a [routerLink]="['projects-details', project.project_id]" href="#">
+          <div class="card bg-transparent">
+            <img
+              class="border-radius-10 w-100"
+              [src]="project.project_Image"
+              [alt]="'FPICO ' + project.project_name"
+            />
+            <div
+              class="card-img-overlay w-100 h-100 d-flex justify-content-center align-items-center bg-black bg-opacity-50"
+            >
+              <h3 class="text-white">
+                {{ project.project_name | translate }}
+              </h3>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
-      <div class="col-md-4">
-        <div class="card bg-transparent">
-          <img
-            class="border-radius-10 w-100"
-            src="./assets/images/projects/2.png"
-            alt="FPICO"
-          />
-          <div
-            class="card-img-overlay w-100 h-100 d-flex justify-content-center align-items-center bg-black bg-opacity-50"
-          >
-            <h3 class="text-white">
-              {{ "home.projects.project02" | translate }}
-            </h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-transparent">
-          <img
-            class="border-radius-10 w-100"
-            src="./assets/images/projects/3.png"
-            alt="FPICO"
-          />
-          <div
-            class="card-img-overlay w-100 h-100 d-flex justify-content-center align-items-center bg-black bg-opacity-50"
-          >
-            <h3 class="text-white">
-              {{ "home.projects.project03" | translate }}
-            </h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-transparent">
-          <img
-            class="border-radius-10 w-100"
-            src="./assets/images/projects/4.png"
-            alt="FPICO"
-          />
-          <div
-            class="card-img-overlay w-100 h-100 d-flex justify-content-center align-items-center bg-black bg-opacity-50"
-          >
-            <h3 class="text-white">
-              {{ "home.projects.project04" | translate }}
-            </h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-transparent">
-          <img
-            class="border-radius-10 w-100"
-            src="./assets/images/projects/5.png"
-            alt="FPICO"
-          />
-          <div
-            class="card-img-overlay w-100 h-100 d-flex justify-content-center align-items-center bg-black bg-opacity-50"
-          >
-            <h3 class="text-white">
-              {{ "home.projects.project05" | translate }}
-            </h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card bg-transparent">
-          <img
-            class="border-radius-10 w-100"
-            src="./assets/images/projects/6.png"
-            alt="FPICO"
-          />
-          <div
-            class="card-img-overlay w-100 h-100 d-flex justify-content-center align-items-center bg-black bg-opacity-50"
-          >
-            <h3 class="text-white">
-              {{ "home.projects.project06" | translate }}
-            </h3>
-          </div>
-        </div>
-      </div>
+      }
     </div>
   </div>
 </section>

@@ -1,6 +1,7 @@
 @import "variables";
 
-.btn-main {
+.btn-main,
+a.btn-main:focus {
   background-color: $main-color !important;
   color: $fourth-color !important;
   border-radius: $border-radius !important;
@@ -49,4 +50,29 @@ a:focus {
   outline: 5px solid #e7c08c7b;
   color: black !important;
   box-shadow: -1px 1px 12px 5px #e7c08c7b;
+}
+
+.btn-pages {
+  background-color: #2b2b2b;
+  border-radius: 100px;
+  color: white;
+  padding: 33px 35px;
+  &:hover {
+    background-color: #2b2b2b !important;
+    color: white !important;
+  }
+}
+
+.btn-outline-main {
+  border: 1px solid $main-color !important;
+  color: white !important;
+  min-width: 300px;
+  padding-block: 15px;
+  border-radius: 10px;
+  font-weight: 400;
+  transition: 0.5s all;
+  &:hover {
+    background-color: $main-color !important;
+    color: black !important;
+  }
 }

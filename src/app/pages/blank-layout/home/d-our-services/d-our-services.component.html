@@ -13,23 +13,29 @@
         @for (slider of _OurServicesContentService.services; track $index) {
         <ng-template carouselSlide [id]="slider.title">
           <div>
-            <div class="images_carousel">
-              <img
-                #img
-                (load)="imageLoaded(img)"
-                class="w-100 h-100"
-                [src]="slider.image_url"
-                [alt]="slider.title"
-              />
-              <span
-                class="placeholder bg-opacity-100 position-absolute top-0 start-0 end-0 bottom-0"
-              ></span>
-              <span
-                style="width: 80%;style='13px'"
-                class="bg-white rounded-3 overflow-hidden position-absolute bottom-0 start-50 translate-middle-x text-nowrap px-3 py-2 fs-5 mb-3 fw-bold"
-                >{{ slider.title | translate }}</span
-              >
-            </div>
+            <a
+              [owlRouterLink]="['services-details', slider.id]"
+              href="#"
+              class="text-decoration-none text-dark"
+            >
+              <div class="images_carousel">
+                <img
+                  #img
+                  (load)="imageLoaded(img)"
+                  class="w-100 h-100"
+                  [src]="slider.image_url"
+                  [alt]="slider.title"
+                />
+                <span
+                  class="placeholder bg-opacity-100 position-absolute top-0 start-0 end-0 bottom-0"
+                ></span>
+                <span
+                  style="width: 80%;style='13px'"
+                  class="bg-white rounded-3 overflow-hidden position-absolute bottom-0 start-50 translate-middle-x text-nowrap px-3 py-2 fs-5 mb-3 fw-bold"
+                  >{{ slider.title | translate }}</span
+                >
+              </div>
+            </a>
           </div>
         </ng-template>
         }

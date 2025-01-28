@@ -1,9 +1,5 @@
-import { Component, Input } from '@angular/core';
-import {
-  LangChangeEvent,
-  TranslateModule,
-  TranslateService,
-} from '@ngx-translate/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-a-hero-section',
@@ -14,4 +10,5 @@ import {
 })
 export class AHeroSectionComponent {
   @Input() isRTL: boolean = false;
+  ngOnChanges(changes: SimpleChanges): void {}
 }

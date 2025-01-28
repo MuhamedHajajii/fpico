@@ -10,6 +10,8 @@ import { KOurPartnersComponent } from './k-our-partners/k-our-partners.component
 import { LOurWorkComponent } from './l-our-work/l-our-work.component';
 import { MContactUsComponent } from './m-contact-us/m-contact-us.component';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
+import { HDownloadPdfSectionComponent } from './h-download-pdf-section/h-download-pdf-section.component';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -25,23 +27,33 @@ import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
     LOurWorkComponent,
     MContactUsComponent,
     KOurPartnersComponent,
+    HDownloadPdfSectionComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   isRTL: boolean = false;
-
+  Subscription!: Subscription;
   constructor(private _TranslateService: TranslateService) {}
 
   ngOnInit(): void {
-    this._TranslateService.onLangChange.subscribe((params: LangChangeEvent) => {
-      console.log(params);
-      if (params.lang === 'ar') {
-        this.isRTL = true;
-      } else {
-        this.isRTL = false;
+    this.Subscription = this._TranslateService.onLangChange.subscribe(
+      (params: LangChangeEvent) => {
+        if (
+          params.lang === 'ar' ||
+          this._TranslateService.currentLang === 'ar'
+        ) {
+          this.isRTL = true;
+        } else {
+          this.isRTL = false;
+        }
       }
-    });
+    );
+    if (this._TranslateService.currentLang === 'ar') {
+      this.isRTL = true;
+    } else {
+      this.isRTL = false;
+    }
   }
 }

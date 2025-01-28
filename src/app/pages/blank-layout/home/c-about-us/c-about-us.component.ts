@@ -1,14 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { SafeHtmlPipe } from '../../../../core/pipes/safe-html.pipe';
+import { AboutUsContentService } from '../../../../core/services/about-us-content.service';
 
 @Component({
   selector: 'app-c-about-us',
   standalone: true,
-  imports: [TranslateModule, SafeHtmlPipe],
+  imports: [TranslateModule],
   templateUrl: './c-about-us.component.html',
   styleUrl: './c-about-us.component.scss',
 })
 export class CAboutUsComponent {
   @Input() isRTL: boolean = false;
+  aboutData: AboutUsContentService = inject(AboutUsContentService);
 }

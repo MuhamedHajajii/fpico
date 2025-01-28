@@ -49,7 +49,6 @@ export class DOurServicesComponent {
 
   ngOnInit(): void {
     this._TranslateService.onLangChange.subscribe((params: LangChangeEvent) => {
-      console.log(params);
       if (params.lang === 'ar') {
         this.customOptions = {
           ...this.customOptions,
@@ -62,6 +61,17 @@ export class DOurServicesComponent {
         };
       }
     });
+    if (this._TranslateService.currentLang === 'ar') {
+      this.customOptions = {
+        ...this.customOptions,
+        rtl: true,
+      };
+    } else {
+      this.customOptions = {
+        ...this.customOptions,
+        rtl: false,
+      };
+    }
   }
 
   imageLoaded(img: HTMLImageElement): void {

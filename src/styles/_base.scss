@@ -44,7 +44,6 @@ body {
       // other
       transition: 0.5s all;
       a {
-        color: black !important;
         text-decoration: none !important;
       }
       &:hover {
@@ -56,11 +55,12 @@ body {
 
 // navbar
 a.nav-link {
-  color: $text-light;
+  color: $text-lighter;
 }
 .navbar {
   a:hover,
-  a.active {
+  a.active,
+  a:focus {
     color: white !important;
   }
 }
@@ -205,4 +205,54 @@ img {
   object-fit: cover; /* Ensure it behaves like an image */
   display: block; /* Adjust display behavior */
   cursor: pointer; /* Add a pointer cursor if it’s clickable */
+}
+
+.banner-animation {
+  opacity: 0;
+  transform: scale(0.5);
+  animation: banner_animation 1s forwards;
+}
+
+@keyframes banner_animation {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.main_Image_Animation {
+  img {
+    transform: scale(0.5);
+    opacity: 0;
+    animation: 0.5s 0.5s forwards main_image_animation;
+    transform-origin: bottom left;
+  }
+}
+
+@keyframes main_image_animation {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.Details_related_images_bg {
+  background-image: url("/assets/images/details/bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-position: center;
+}
+.bg-section-image {
+  background-image: url("/assets/images/about-us-page/bg.png");
+  background-repeat: no-repeat;
+
+  background-position: left 70%;
 }

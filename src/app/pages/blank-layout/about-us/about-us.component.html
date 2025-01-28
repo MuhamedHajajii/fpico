@@ -1,1 +1,52 @@
-<p>about-us works!</p>
+<section class="text-capitalize my-5 bg-section-image">
+  <div class="container text-white">
+    <!-- section and title -->
+    <div class="row justify-content-center">
+      <div class="col-12 row align-items-center">
+        <app-pages-header
+          [title]="'Pages.About.title'"
+          [title02]="'Pages.About.title02'"
+          [desc01]="'Pages.About.title-desc01'"
+          [desc02]="'Pages.About.title-desc02'"
+          [order]="true"
+        ></app-pages-header>
+      </div>
+
+      <!-- Home Main Image -->
+      <div class="col-12">
+        <div class="my-5">
+          <img
+            class="w-100 banner-animation"
+            src="./assets/images/hero/Kingdom Centre.png"
+            alt="FPICO"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- about us banner -->
+    <app-about-banner-section></app-about-banner-section>
+
+    <!-- Master Message -->
+    <app-b-manager-message></app-b-manager-message>
+
+    <!-- our Partners -->
+    <app-k-our-partners
+      [isRTL]="isRTL"
+      [isAddBackgroundColor]="true"
+    ></app-k-our-partners>
+
+    <!-- About us last banner -->
+    <app-about-us-last-banner></app-about-us-last-banner>
+
+    <!-- Download PDF section -->
+    <div class="my-5">
+      <app-h-download-pdf-section></app-h-download-pdf-section>
+    </div>
+
+    <!-- Contact Us -->
+    <div>
+      <app-about-us-contact-form></app-about-us-contact-form>
+    </div>
+  </div>
+</section>

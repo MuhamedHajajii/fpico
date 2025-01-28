@@ -5,18 +5,18 @@
         class="col-md-4 position-relative d-flex justify-content-center align-items-center"
       >
         <div>
-          <div [innerHTML]="'home.about-first-section' | translate | safeHtml">
-            <!-- <h2 class="mb-5">
-              <span class="rounded-1 p-3 fs-18" style="background: #303030"
-                >about fpico</span
-              >
+          <div>
+            <h2 class="mb-5">
+              <span class="rounded-1 p-3 fs-18" style="background: #303030">{{
+                aboutData.aboutUsContent.mainTitle | translate
+              }}</span>
             </h2>
-            <h3 class="mb-3">what we stand for</h3>
+            <h3 class="mb-3">
+              {{ aboutData.aboutUsContent.data[0].title | translate }}
+            </h3>
             <p class="text-lighter">
-              fpico is a saudi company specializing in contracting services that
-              seeks to cover all the need of society and meet all desiresat
-              competitive prices and high quality
-            </p> -->
+              {{ aboutData.aboutUsContent.data[0].description | translate }}
+            </p>
           </div>
           <img
             [class]="{ 'start-0': isRTL, 'end-0': !isRTL }"
@@ -28,11 +28,6 @@
       </div>
       <div class="col-md-4 d-flex justify-content-center align-items-center">
         <div>
-          <!-- <img
-            src="./assets/images/DownloadSection/1_GIF.gif"
-            class="w-100"
-            alt="FPICO"
-          /> -->
           <video
             src="./assets/images/DownloadSection/1VF.mp4"
             autoplay
@@ -46,21 +41,23 @@
       <div
         class="col-md-4 position-relative d-flex justify-content-center align-items-center flex-column"
       >
-        <div [innerHTML]="'home.about.second-section' | translate | safeHtml">
-          <!-- <div>
-            <h3 class="mb-3">our mission</h3>
+        <div>
+          <div class="mb-5">
+            <h3 class="mb-3">
+              {{ aboutData.aboutUsContent.data[1].title | translate }}
+            </h3>
             <p class="text-lighter">
-              get the perfect design with a super aesthetic touch at a very
-              reasonable price in a specific time and get it with the best quality
+              {{ aboutData.aboutUsContent.data[1].description | translate }}
             </p>
           </div>
           <div>
-            <h3 class="mb-3">our vision</h3>
+            <h3 class="mb-3">
+              {{ aboutData.aboutUsContent.data[2].title | translate }}
+            </h3>
             <p class="text-lighter">
-              to be saudi’s leading construction partner by providing innovative,
-              reliable, and customer focused solutions
+              {{ aboutData.aboutUsContent.data[2].description | translate }}
             </p>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>

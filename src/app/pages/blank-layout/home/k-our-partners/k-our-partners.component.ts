@@ -11,4 +11,5 @@ import { SafeHtmlPipe } from '../../../../core/pipes/safe-html.pipe';
 })
 export class KOurPartnersComponent {
   @Input() isRTL: boolean = false;
+  @Input() isAddBackgroundColor: boolean = false;
 }

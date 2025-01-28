@@ -1,7 +1,7 @@
 <div class="p-3">
   <div class="mb-3">
     <p class="my-1 fw-bold title__fonts__normal h4">
-      {{ "contact-us-page.form.title" | translate }}
+      {{ "Pages.contact-us-page.form.title" | translate }}
     </p>
   </div>
   <form [formGroup]="messagesForm" (ngSubmit)="onSubmit()">
@@ -14,19 +14,21 @@
             startValidation) {
             <small class="text-danger fst-italic"
               >{{
-                "contact-us-page.form.validation.required" | translate
+                "Pages.contact-us-page.form.validation.required" | translate
               }}*</small
             >
             } @if (messagesForm.get('name')?.getError("pattern") &&
             startValidation) {
             <small class="text-danger fst-italic"
-              >{{ "contact-us-page.form.validation.name" | translate }}*</small
+              >{{
+                "Pages.contact-us-page.form.validation.name" | translate
+              }}*</small
             >
             } @if (messagesForm.get('name')?.getError("minlength") &&
             startValidation) {
             <small class="text-danger fst-italic"
               >{{
-                "contact-us-page.form.validation.name02" | translate
+                "Pages.contact-us-page.form.validation.name02" | translate
               }}*</small
             >
             }
@@ -56,13 +58,15 @@
             startValidation) {
             <small class="text-danger fst-italic"
               >{{
-                "contact-us-page.form.validation.required" | translate
+                "Pages.contact-us-page.form.validation.required" | translate
               }}*</small
             >
             } @if (messagesForm.get('email')?.getError("email") &&
             startValidation) {
             <small class="text-danger fst-italic"
-              >{{ "contact-us-page.form.validation.email" | translate }}*</small
+              >{{
+                "Pages.contact-us-page.form.validation.email" | translate
+              }}*</small
             >
             }
           </div>
@@ -91,13 +95,15 @@
             startValidation) {
             <small class="text-danger fst-italic"
               >{{
-                "contact-us-page.form.validation.required" | translate
+                "Pages.contact-us-page.form.validation.required" | translate
               }}*</small
             >
             } @if (messagesForm.get('phone')?.errors && startValidation &&
             phone.value?.length || 0 > 0) {
             <small class="text-danger fst-italic"
-              >{{ "contact-us-page.form.validation.phone" | translate }}*</small
+              >{{
+                "Pages.contact-us-page.form.validation.phone" | translate
+              }}*</small
             >
             }
           </div>
@@ -140,14 +146,14 @@
             startValidation) {
             <small class="text-danger fst-italic"
               >{{
-                "contact-us-page.form.validation.required" | translate
+                "Pages.contact-us-page.form.validation.required" | translate
               }}*</small
             >
             } @if (messagesForm.get('message')?.getError("minlength") &&
             startValidation) {
             <small class="text-danger fst-italic"
               >{{
-                "contact-us-page.form.validation.message" | translate
+                "Pages.contact-us-page.form.validation.message" | translate
               }}*</small
             >
             }
@@ -173,7 +179,7 @@
         <button
           class="btn-main btn px-4 title__fonts fw-normal rounded-1 py-3 text-uppercase fs-14 w-100"
         >
-          {{ "contact-us-page.form.button" | translate }}
+          {{ "Pages.contact-us-page.form.button" | translate }}
         </button>
       </div>
     </div>
