@@ -34,3 +34,13 @@ html[dir="ltr"] {
 }
 
 @import "../node_modules/intl-tel-input/build/css/intlTelInput.css";
+/*
+"scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "purgecss": "node ./src/purgecss.js",
+    "build": "ng build && npm run purgecss",
+    "watch": "ng build --watch --configuration development && npm run purgecss",
+    "test": "ng test",
+    "serve:ssr:fipco": "node dist/fipco/server/server.mjs"
+  },*/
