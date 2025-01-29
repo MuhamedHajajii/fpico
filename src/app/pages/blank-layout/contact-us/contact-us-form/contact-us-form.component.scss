@@ -23,10 +23,12 @@ textarea {
 ::ng-deep .form-select::placeholder,
 textarea::placeholder,
 .form-select {
-  color: #828282;
+  color: #828282 !important;
   text-transform: capitalize;
 }
-
+.form-select option {
+  color: white !important;
+}
 ::ng-deep .iti__country-list,
 ::ng-deep .iti__country-list,
 ::ng-deep .country-dropdown {
@@ -35,7 +37,9 @@ textarea::placeholder,
   color: white !important;
   overflow-x: hidden !important;
 }
-
+select option:disabled {
+  color: gray !important; /* Change to the desired color */
+}
 ::ng-deep .iti__country-list::-webkit-scrollbar-thumb {
   background-color: #000;
   box-shadow: 0px 0px 10px 0px #eeeeee8c inset;
@@ -55,4 +59,7 @@ textarea::placeholder,
 ::ng-deep .form-control.is-invalid,
 ::ng-deep .was-validated .form-control:invalid {
   background-image: none;
+}
+.form-select {
+  background-image: url("/assets/images/contact_us_page/arrow_down.png");
 }
