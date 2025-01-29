@@ -1,7 +1,19 @@
-<section class="text-capitalize my-5">
+<section class="text-capitalize my-5 position-relative z-1">
+  <!-- video -->
+  <div
+    class="position-absolute start-0 end-0 top-0 bg-dark text-center bg-opacity-75"
+  >
+    <video
+      class="object-fit-cover position-relative z-n1 h-100"
+      src="./assets/images/details/NVideo.mp4"
+      autoplay
+      muted
+      loop
+    ></video>
+  </div>
   <div class="container text-white">
     <!-- section and title -->
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mb-5">
       <div class="col-12 row align-items-center">
         <app-pages-header
           [title]="'Pages.services.title'"

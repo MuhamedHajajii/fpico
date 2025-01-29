@@ -1,0 +1,14 @@
+@import "variables";
+
+.main-text {
+  // background-color: $third-color;
+  border-radius: $border-radius;
+  padding: 30px;
+  padding-bottom: 35px;
+  // box-shadow: -10px 10px 0px $main-color;
+  background-image: url("/assets/images/about-us-page/1.png"),
+    url("/assets/images/about-us-page/2.png");
+  background-size: 99% 90%, 98% 85%;
+  background-position: top right, bottom left;
+  background-repeat: no-repeat;
+}

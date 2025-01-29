@@ -31,12 +31,13 @@
               "includePaths": ["src/styles"]
             },
             "assets": [
+              "src/assets",
              "src/assets/images/my-fav.ico/favicon.ico",
              "src/assets/images/my-fav.ico",
              "src/site.webmanifest",
-             "src/sitemap.xml",
              "src/favicon.ico",
-              "src/assets"
+             "src/sitemap.xml",
+             "src/robots.txt"
             ],
             "styles": [
               "node_modules/ngx-spinner/animations/ball-beat.css",
@@ -107,12 +108,13 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets",
               "src/assets/images/my-fav.ico/favicon.ico",
               "src/assets/images/my-fav.ico",
               "src/site.webmanifest",
-              "src/sitemap.xml",
               "src/favicon.ico",
-               "src/assets"
+              "src/sitemap.xml",
+              "src/robots.txt"
             ],
             "styles": [
               "src/styles.scss"

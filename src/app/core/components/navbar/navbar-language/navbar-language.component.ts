@@ -22,8 +22,8 @@ export class NavbarLanguageComponent {
   ) {}
   ngOnInit(): void {
     setTimeout(() => {
-      this.translateService.use(this.translateService.getBrowserLang() || 'ar');
-      this.selectedLanguage = this.translateService.getBrowserLang() || 'ar';
+      this.translateService.use(this.translateService.getBrowserLang() || 'en');
+      this.selectedLanguage = this.translateService.getBrowserLang() || 'en';
     }, 0);
   }
   onLanguageChange() {

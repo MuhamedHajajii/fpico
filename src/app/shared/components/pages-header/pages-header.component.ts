@@ -32,17 +32,27 @@ export class PagesHeaderComponent {
       } else {
         this.isRtl = false;
       }
-      console.log(this._TranslateService.currentLang);
+      this.toggleViewOtherPagesButtons();
+      this.handleAboutArabicText();
     });
     if (this._TranslateService.currentLang === 'ar') {
       this.isRtl = true;
     } else {
       this.isRtl = false;
     }
-    console.log(this._TranslateService.currentLang);
+    this.toggleViewOtherPagesButtons();
+    this.handleAboutArabicText();
   }
 
-  handleCurrentPage(): void {
+  handleAboutArabicText(): void {
+    if (this._Router.url.includes('/about-us') && this.isRtl) {
+      this.order = false;
+    } else if (this._Router.url.includes('/about-us') && !this.isRtl) {
+      this.order = true;
+    }
+  }
+
+  toggleViewOtherPagesButtons(): void {
     if (this._Router.url.includes('/projects')) {
       this.isProjects = true;
     } else {

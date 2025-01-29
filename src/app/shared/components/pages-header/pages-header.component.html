@@ -1,4 +1,4 @@
-<div class="col-12 row align-items-center position-relative">
+<div class="col-12 row align-items-center position-relative main">
   <!-- Header -->
   <div class="col-lg-8">
     <div>
@@ -10,6 +10,7 @@
           src="./assets/images/DownloadSection/logo-light.png"
           alt="FPICO"
         />
+
         <h2>
           <div class="d-flex align-items-center gap-2">
             <span class="text-main" style="font-size: 45px">{{
@@ -48,7 +49,7 @@
   <!-- button -->
   <div class="col-lg-4 d-flex justify-content-end">
     <div>
-      @if ( isProjects) {
+      @if ( !isProjects) {
       <a
         class="btn btn-pages text-decoration-none"
         routerLink="/projects"

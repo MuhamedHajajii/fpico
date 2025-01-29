@@ -13,11 +13,9 @@
         @for (slider of _OurServicesContentService.services; track $index) {
         <ng-template carouselSlide [id]="slider.title">
           <div>
-            <a
-              [owlRouterLink]="['services-details', slider.id]"
-              href="#"
-              class="text-decoration-none text-dark"
-            >
+            <!-- [owlRouterLink]="['services-details', slider.id]" -->
+            <!-- href="#" -->
+            <a class="text-decoration-none text-dark">
               <div class="images_carousel">
                 <img
                   #img

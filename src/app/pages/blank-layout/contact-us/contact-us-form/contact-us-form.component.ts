@@ -18,6 +18,7 @@ import {
   PhoneNumberFormat,
   SearchCountryField,
 } from 'ngx-intl-tel-input';
+import { OurServicesContentService } from '../../../../core/services/our-services-content.service';
 
 @Component({
   selector: 'app-contact-us-form',
@@ -41,7 +42,8 @@ export class ContactUsFormComponent {
   constructor(
     private _Router: Router,
     @Inject(PLATFORM_ID) private _PLATFORM_ID: object,
-    private _TranslateService: TranslateService
+    private _TranslateService: TranslateService,
+    public _OurServicesContentService: OurServicesContentService
   ) {}
 
   messagesForm: FormGroup = new FormGroup({
@@ -50,7 +52,10 @@ export class ContactUsFormComponent {
       Validators.pattern(/^[a-zA-Z\s]+$/),
       Validators.minLength(3),
     ]),
-    email: new FormControl('', [Validators.required, Validators.email]),
+    email: new FormControl('', [
+      Validators.required,
+      Validators.pattern(/[A-Za-z0-9\._%+\-]+@[A-Za-z0-9\.\-]+\.[A-Za-z]{2,}/),
+    ]),
     services: new FormControl('', [Validators.required]),
     phone: new FormControl('', [Validators.required]),
     message: new FormControl('', [
@@ -82,6 +87,17 @@ export class ContactUsFormComponent {
     }
   }
 
+  get phoneInputStyles() {
+    return {
+      height: '100%',
+      padding: '1rem',
+      'text-align': this.isRTL ? 'right' : 'left',
+      border:
+        this.startValidation && this.messagesForm.get('phone')?.errors
+          ? '1px solid red'
+          : '1px solid #ccc',
+    };
+  }
   ngOnInit(): void {
     this._TranslateService.onLangChange.subscribe((params: LangChangeEvent) => {
       if (params.lang === 'ar') {
@@ -90,7 +106,7 @@ export class ContactUsFormComponent {
         this.isRTL = false;
       }
     });
-    if (this._TranslateService.currentLang === 'ar') {
+    if (this._TranslateService.currentLang == 'ar') {
       this.isRTL = true;
     } else {
       this.isRTL = false;

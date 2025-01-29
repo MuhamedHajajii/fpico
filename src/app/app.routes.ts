@@ -16,7 +16,10 @@ export const routes: Routes = [
           import('./pages/blank-layout/home/home.component').then(
             (m) => m.HomeComponent
           ),
-        data: { title: 'Home', description: 'Welcome to our homepage!' },
+        data: {
+          title: 'FPICO',
+          description: 'Welcome to our homepage!',
+        },
       },
       {
         path: 'projects',
@@ -25,7 +28,7 @@ export const routes: Routes = [
             (m) => m.ProjectsComponent
           ),
         data: {
-          title: 'projects',
+          title: 'FPICO - PROJECTS',
           description: 'Explore our various projects and initiatives.',
         },
       },
@@ -36,7 +39,7 @@ export const routes: Routes = [
             './pages/blank-layout/project-details/project-details.component'
           ).then((m) => m.ProjectDetailsComponent),
         data: {
-          title: 'Project Details',
+          title: 'FPICO - PROJECTS',
           description: 'Details of the selected project.',
         },
       },
@@ -47,7 +50,7 @@ export const routes: Routes = [
             (m) => m.ServicesComponent
           ),
         data: {
-          title: 'Services',
+          title: 'FPICO - SERVICES',
           description: 'Learn more about the services we offer.',
         },
       },
@@ -58,7 +61,7 @@ export const routes: Routes = [
             './pages/blank-layout/services-details/services-details.component'
           ).then((m) => m.ServicesDetailsComponent),
         data: {
-          title: 'Services',
+          title: 'FPICO - SERVICES',
           description: 'Learn more about the services we offer.',
         },
       },
@@ -69,7 +72,7 @@ export const routes: Routes = [
             (m) => m.AboutUsComponent
           ),
         data: {
-          title: 'About Us',
+          title: 'FPICO - ABOUT US',
           description: 'Get to know more about our company and mission.',
         },
       },
@@ -80,7 +83,7 @@ export const routes: Routes = [
             (m) => m.ContactUsComponent
           ),
         data: {
-          title: 'Contact Us',
+          title: 'FPICO - CONTACT US',
           description: 'Reach out to us for any queries or support.',
         },
       },
@@ -91,7 +94,7 @@ export const routes: Routes = [
             (m) => m.NotFoundComponent
           ),
         data: {
-          title: 'Page Not Found',
+          title: 'FPICO - Page Not Found',
           description: 'Sorry, the page you are looking for does not exist.',
         },
       },

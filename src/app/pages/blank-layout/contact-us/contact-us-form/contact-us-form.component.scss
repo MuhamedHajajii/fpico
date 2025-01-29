@@ -1,5 +1,7 @@
+input.form-control,
+.form-select,
 ::ng-deep input.form-control,
-::ng-deep input.form-control,
+::ng-deep .form-select,
 ::ng-deep .iti,
 ::ng-deep #country-search-box,
 ::ng-deep #country-search-box:focus,
@@ -8,7 +10,7 @@
 textarea {
   background-color: #373737 !important;
   color: white !important;
-  border-color: transparent;
+  border-color: transparent !important;
   width: 100%;
   padding-block: 10px !important;
   border-radius: 10px !important;
@@ -18,8 +20,9 @@ textarea {
   padding: 0px !important;
 }
 ::ng-deep input.form-control::placeholder,
-::ng-deep input.form-control::placeholder,
-textarea::placeholder {
+::ng-deep .form-select::placeholder,
+textarea::placeholder,
+.form-select {
   color: #828282;
   text-transform: capitalize;
 }
@@ -47,6 +50,8 @@ textarea::placeholder {
 
 .form-control.is-invalid,
 .was-validated .form-control:invalid,
+.form-select.is-invalid,
+.was-validated .form-select:invalid,
 ::ng-deep .form-control.is-invalid,
 ::ng-deep .was-validated .form-control:invalid {
   background-image: none;

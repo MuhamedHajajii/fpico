@@ -61,7 +61,7 @@
                 "Pages.contact-us-page.form.validation.required" | translate
               }}*</small
             >
-            } @if (messagesForm.get('email')?.getError("email") &&
+            } @if (messagesForm.get('email')?.getError("pattern") &&
             startValidation) {
             <small class="text-danger fst-italic"
               >{{
@@ -76,7 +76,7 @@
                 'is-invalid':
                   startValidation &&
                   (messagesForm.get('email')?.getError('required') ||
-                    messagesForm.get('email')?.getError('email'))
+                    messagesForm.get('email')?.getError('pattern'))
               }"
               type="email"
               class="form-control"
@@ -134,9 +134,42 @@
           ></ngx-intl-tel-input>
         </div>
       </div>
-      <!-- input field: userSelectService  -->
+      <!-- input field: userServices  -->
       <div class="col-md-12">
-        <div class=""></div>
+        <div>
+          <div class="text-end">
+            @if (messagesForm.get('services')?.getError("required") &&
+            startValidation) {
+            <small class="text-danger fst-italic"
+              >{{
+                "Pages.contact-us-page.form.validation.required" | translate
+              }}*</small
+            >
+            }
+          </div>
+          <div>
+            <select
+              formControlName="services"
+              [ngClass]="{
+                'is-invalid':
+                  startValidation &&
+                  messagesForm.get('services')?.getError('required')
+              }"
+              class="form-select w-100"
+              name="services"
+              id="services"
+            >
+              <option value="" selected disabled>
+                {{ isRTL ? "الخدمة" : "service" }}
+              </option>
+              @for (item of _OurServicesContentService.services; track $index) {
+              <option [value]="item.title | translate">
+                {{ item.title | translate }}
+              </option>
+              }
+            </select>
+          </div>
+        </div>
       </div>
       <!-- input field: userMessage  -->
       <div class="col-md-12">
