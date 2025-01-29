@@ -20,7 +20,7 @@ for (let f of files) {
 }
 console.log("Run PurgeCSS...");
 exec(
-  "./node_modules/purgecss/bin/purgecss.js -css ./dist/fipco/browser/*.css --content ./dist/fipco/browser/index.html ./dist/fipco/browser/*.js --safelist intl-tel-input iti__flag-container iti__selected-flag iti__country-list iti__flag iti__country iti__dial-code -o ./dist/fipco/browser/",
+  "./node_modules/purgecss/bin/purgecss.js -css ./dist/fipco/browser/*.css --content ./dist/fipco/browser/index.html ./dist/fipco/browser/*.js --safelist '.*flags.*\\.png' -o ./dist/fipco/browser/",
   function (error, stdout, stderr) {
     console.log("PurgeCSS done");
 
